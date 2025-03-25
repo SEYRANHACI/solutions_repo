@@ -48,6 +48,26 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#projectile-motion-detailed-description-with-formulas">Projectile Motion – Detailed Description with Formulas</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#1-equations-of-motion">1. Equations of Motion</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#components-of-initial-velocity">Components of Initial Velocity:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-time-of-flight-t_f">2. Time of Flight \( (t_f) \)</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-maximum-height-h">3. Maximum Height \( (H) \)</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-horizontal-range-r">4. Horizontal Range \( (R) \)</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#5-equation-of-the-trajectory">5. Equation of the Trajectory</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#6-velocity-at-any-time-t">6. Velocity at Any Time \( t \)</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#key-insights-real-world-applications">Key Insights &amp; Real-World Applications</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -172,7 +192,69 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
-<p>lorem 1 </p>
+<h3 id="projectile-motion-detailed-description-with-formulas"><strong>Projectile Motion – Detailed Description with Formulas</strong></h3>
+<p><strong>Projectile motion</strong> describes the motion of an object launched into the air that moves under the influence of <strong>gravity</strong>. The motion occurs in <strong>two dimensions</strong>:  </p>
+<p>1️⃣ <strong>Horizontal Motion (Constant Velocity)</strong><br/>
+2️⃣ <strong>Vertical Motion (Accelerated due to Gravity)</strong> </p>
+<p>The <strong>path of the projectile is a parabola</strong> (ignoring air resistance).  </p>
+<hr/>
+<h2 id="1-equations-of-motion"><strong>1. Equations of Motion</strong></h2>
+<p>Let’s consider a projectile launched with:<br/>
+- <strong>Initial velocity</strong> <span class="arithmatex">\( v_0 \)</span><br/>
+- <strong>Launch angle</strong> <span class="arithmatex">\( \theta \)</span><br/>
+- <strong>Acceleration due to gravity</strong> <span class="arithmatex">\( g = 9.81 \, m/s^2 \)</span> </p>
+<h3 id="components-of-initial-velocity"><strong>Components of Initial Velocity:</strong></h3>
+<ul>
+<li><strong>Horizontal velocity</strong>:<br/>
+  [
+  v_{0x} = v_0 \cos(\theta)
+  ]</li>
+<li><strong>Vertical velocity</strong>:<br/>
+  [
+  v_{0y} = v_0 \sin(\theta)
+  ]</li>
+</ul>
+<hr/>
+<h2 id="2-time-of-flight-t_f"><strong>2. Time of Flight <span class="arithmatex">\( (t_f) \)</span></strong></h2>
+<p>The time a projectile stays in the air is determined by the time it takes to reach the highest point and fall back.  </p>
+<div class="arithmatex">\[
+t_f = \frac{2 v_0 \sin(\theta)}{g}
+\]</div>
+<hr/>
+<h2 id="3-maximum-height-h"><strong>3. Maximum Height <span class="arithmatex">\( (H) \)</span></strong></h2>
+<p>The highest point reached by the projectile:  </p>
+<div class="arithmatex">\[
+H = \frac{v_0^2 \sin^2(\theta)}{2g}
+\]</div>
+<hr/>
+<h2 id="4-horizontal-range-r"><strong>4. Horizontal Range <span class="arithmatex">\( (R) \)</span></strong></h2>
+<p>The total horizontal distance covered by the projectile:  </p>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin(2\theta)}{g}
+\]</div>
+<p>📌 <strong>The maximum range occurs at <span class="arithmatex">\( \theta = 45^\circ \)</span>, where <span class="arithmatex">\( R_{max} = \frac{v_0^2}{g} \)</span>.</strong> </p>
+<hr/>
+<h2 id="5-equation-of-the-trajectory"><strong>5. Equation of the Trajectory</strong></h2>
+<p>To describe the projectile’s curved path (parabolic equation):  </p>
+<div class="arithmatex">\[
+y = x \tan(\theta) - \frac{g x^2}{2 v_0^2 \cos^2(\theta)}
+\]</div>
+<p>This equation shows that the projectile follows a <strong>parabolic</strong> path.  </p>
+<hr/>
+<h2 id="6-velocity-at-any-time-t"><strong>6. Velocity at Any Time <span class="arithmatex">\( t \)</span></strong></h2>
+<p>At any time <span class="arithmatex">\( t \)</span>, the velocity components are:<br/>
+- <strong>Horizontal velocity:</strong> <span class="arithmatex">\( v_x = v_0 \cos(\theta) \)</span><br/>
+- <strong>Vertical velocity:</strong> <span class="arithmatex">\( v_y = v_0 \sin(\theta) - g t \)</span> </p>
+<p>The <strong>magnitude of velocity</strong> at any time:<br/>
+[
+v = \sqrt{v_x^2 + v_y^2}
+]</p>
+<hr/>
+<h2 id="key-insights-real-world-applications"><strong>Key Insights &amp; Real-World Applications</strong></h2>
+<p>🔹 <strong>Ignoring air resistance</strong>, projectiles always follow a perfect <strong>parabolic trajectory</strong>.<br/>
+🔹 Used in <strong>sports</strong>, <strong>military ballistics</strong>, and <strong>engineering</strong>.<br/>
+🔹 Adding <strong>air resistance</strong> makes the equations more complex and the range shorter.  </p>
+<p>Would you like a <strong>graph or simulation</strong> to visualize this? 🚀</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
