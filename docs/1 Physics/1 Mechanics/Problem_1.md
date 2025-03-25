@@ -1,6 +1,6 @@
 ### **Mathematical Formulation of Projectile Motion**
 
-#### **1. Governing Equations of Motion**  
+#### **1.1 Governing Equations of Motion**  
 Using **Newton’s Second Law**, considering only gravitational force (neglecting air resistance):
 
 \[
@@ -110,3 +110,85 @@ where \( k \) is a proportionality constant.
 
 These equations provide a complete theoretical framework for projectile motion analysis. Would you like further modifications or additional explanations?
 ![alt text](image.png)
+
+
+## **1.2. Theoretical Analysis of Range**  
+The range \( R \) of a projectile launched at an angle \( \theta \) with initial velocity \( v_0 \) is given by:
+
+\[
+R = \frac{v_0^2 \sin 2\theta}{g}
+\]
+
+where:  
+- \( v_0 \) is the initial velocity,  
+- \( g \) is the gravitational acceleration,  
+- \( \theta \) is the angle of projection.  
+
+### **Key Observations:**  
+1. **Dependence on \( \theta \):**  
+   - The range is **maximized** when \( \sin 2\theta \) is maximized, which occurs at \( \theta = 45^\circ \).  
+   - The function is symmetric around \( 45^\circ \), meaning \( R(\theta) = R(90^\circ - \theta) \).  
+   - Beyond \( 45^\circ \), increasing \( \theta \) decreases the horizontal component of velocity, reducing \( R \).  
+
+2. **Effect of Initial Velocity \( v_0 \):**  
+   - Since \( R \propto v_0^2 \), doubling \( v_0 \) quadruples the range.  
+   - A higher velocity results in a greater overall displacement.  
+
+3. **Effect of Gravity \( g \):**  
+   - Since \( R \propto \frac{1}{g} \), an increase in gravitational acceleration decreases the range.  
+   - On planets with **lower gravity** (e.g., Moon, Mars), projectiles travel **farther** for the same \( v_0 \).  
+
+4. **Effect of Initial Height \( y_0 \):**  
+   - If the projectile is launched from a height \( y_0 > 0 \), range is extended due to a longer time of flight.  
+   - The range equation is modified to account for this additional height:  
+
+\[
+t = \frac{v_0 \sin\theta + \sqrt{(v_0 \sin\theta)^2 + 2gy_0}}{g}
+\]
+
+\[
+R = v_0 \cos\theta \cdot t
+\]
+
+---
+![alt text](image-1.png)
+
+---
+
+## **3. Observations from Graphs**  
+1. **Effect of Velocity:**  
+   - The peak of the curve shifts **upward** as \( v_0 \) increases, confirming \( R \propto v_0^2 \).  
+
+2. **Effect of Height:**  
+   - When **\( y_0 \) increases**, the range extends beyond \( \theta = 45^\circ \).  
+   - The maximum range shifts to a slightly **lower** angle (e.g., \( 40^\circ \) instead of \( 45^\circ \)).  
+
+---
+
+## **4. Limitations & Extensions**  
+### **Limitations:**  
+- **Ignores air resistance:** In reality, air drag reduces range.  
+- **No wind effects:** Wind can **increase/decrease** range depending on direction.  
+- **Flat terrain assumption:** Uneven ground alters projectile trajectory.  
+
+### **Extensions:**  
+1. **Air Resistance Model:**  
+   \[
+   F_{\text{drag}} = \frac{1}{2} C_d \rho A v^2
+   \]
+   - Implementing numerical methods to model **drag forces**.  
+
+2. **Wind Influence:**  
+   - Adding **lateral forces** for real-world accuracy.  
+
+---
+
+## **5. Conclusion**  
+- The range follows a **parabolic trend** with respect to \( \theta \), maximizing at **\( 45^\circ \)**.  
+- Increasing \( v_0 \) **quadratically increases** range.  
+- Higher launch height shifts the optimal angle **below** \( 45^\circ \).  
+- Gravity acts as an **inverse factor**, reducing the range when increased.  
+
+This provides a **solid foundation** for studying real-world projectile motion, from **sports science** (basketball, soccer) to **aerospace applications** (missile trajectory planning).  
+
+Would you like additional details or modifications? 🚀
