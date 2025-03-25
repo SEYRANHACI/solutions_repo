@@ -376,6 +376,50 @@ Then the range:
 <li><strong>Wind effects:</strong> Lateral forces modifying trajectory.</li>
 <li><strong>Numerical simulations:</strong> Using differential equations for real-world modeling.</li>
 </ol>
+<p>1.4</p>
+<p>Projectile motion is governed by Newton's second law:</p>
+<div class="arithmatex">\[
+F = ma
+\]</div>
+<p>For a projectile under gravity, the equations of motion are:</p>
+<h4 id="equations-of-motion"><strong>Equations of Motion:</strong></h4>
+<ol>
+<li><strong>Horizontal Motion:</strong>
+   [
+   x(t) = v_0 \cos\theta \cdot t
+   ]</li>
+<li><strong>Vertical Motion:</strong>
+   [
+   y(t) = y_0 + v_0 \sin\theta \cdot t - \frac{1}{2} g t^2
+   ]</li>
+</ol>
+<h4 id="time-of-flight"><strong>Time of Flight:</strong></h4>
+<p>The time <span class="arithmatex">\( t \)</span> when the projectile returns to the same height <span class="arithmatex">\( y_0 \)</span> (assuming <span class="arithmatex">\( y_0 = 0 \)</span>) is obtained by solving:</p>
+<div class="arithmatex">\[
+0 = v_0 \sin\theta \cdot t - \frac{1}{2} g t^2
+\]</div>
+<div class="arithmatex">\[
+t = \frac{2 v_0 \sin\theta}{g}
+\]</div>
+<h4 id="range-formula"><strong>Range Formula:</strong></h4>
+<p>The horizontal range <span class="arithmatex">\( R \)</span> is given by:</p>
+<div class="arithmatex">\[
+R = v_0 \cos\theta \cdot t
+\]</div>
+<p>Substituting <span class="arithmatex">\( t = \frac{2 v_0 \sin\theta}{g} \)</span>:</p>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin 2\theta}{g}
+\]</div>
+<p>If the projectile is launched from an initial height <span class="arithmatex">\( y_0 \neq 0 \)</span>, the range is:</p>
+<div class="arithmatex">\[
+t = \frac{v_0 \sin\theta + \sqrt{(v_0 \sin\theta)^2 + 2 g y_0}}{g}
+\]</div>
+<div class="arithmatex">\[
+R = v_0 \cos\theta \cdot t
+\]</div>
+<hr/>
+<p><img alt="alt text" src="../image-3.png"/>
+<img alt="alt text" src="../image-4.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
