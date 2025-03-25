@@ -48,7 +48,7 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#1-governing-equations-of-motion">1. Governing Equations of Motion</a>
+<li class="toctree-l3"><a class="reference internal" href="#11-governing-equations-of-motion">1.1 Governing Equations of Motion</a>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#2-solving-the-equations">2. Solving the Equations</a>
 </li>
@@ -141,7 +141,7 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h3 id="mathematical-formulation-of-projectile-motion"><strong>Mathematical Formulation of Projectile Motion</strong></h3>
-<h4 id="1-governing-equations-of-motion"><strong>1. Governing Equations of Motion</strong></h4>
+<h4 id="11-governing-equations-of-motion"><strong>1.1 Governing Equations of Motion</strong></h4>
 <p>Using <strong>Newton’s Second Law</strong>, considering only gravitational force (neglecting air resistance):</p>
 <div class="arithmatex">\[
 F = ma = -mg \hat{y}
@@ -225,6 +225,96 @@ H = y_0 + \frac{v_0^2 \sin^2\theta}{2g}
 <hr/>
 <p>These equations provide a complete theoretical framework for projectile motion analysis. Would you like further modifications or additional explanations?
 <img alt="alt text" src="../image.png"/></p>
+<h2 id="12-theoretical-analysis-of-range"><strong>1.2. Theoretical Analysis of Range</strong></h2>
+<p>The range <span class="arithmatex">\( R \)</span> of a projectile launched at an angle <span class="arithmatex">\( \theta \)</span> with initial velocity <span class="arithmatex">\( v_0 \)</span> is given by:</p>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin 2\theta}{g}
+\]</div>
+<p>where:<br/>
+- <span class="arithmatex">\( v_0 \)</span> is the initial velocity,<br/>
+- <span class="arithmatex">\( g \)</span> is the gravitational acceleration,<br/>
+- <span class="arithmatex">\( \theta \)</span> is the angle of projection.  </p>
+<h3 id="key-observations"><strong>Key Observations:</strong></h3>
+<ol>
+<li><strong>Dependence on <span class="arithmatex">\( \theta \)</span>:</strong> </li>
+<li>The range is <strong>maximized</strong> when <span class="arithmatex">\( \sin 2\theta \)</span> is maximized, which occurs at <span class="arithmatex">\( \theta = 45^\circ \)</span>.  </li>
+<li>The function is symmetric around <span class="arithmatex">\( 45^\circ \)</span>, meaning <span class="arithmatex">\( R(\theta) = R(90^\circ - \theta) \)</span>.  </li>
+<li>
+<p>Beyond <span class="arithmatex">\( 45^\circ \)</span>, increasing <span class="arithmatex">\( \theta \)</span> decreases the horizontal component of velocity, reducing <span class="arithmatex">\( R \)</span>.  </p>
+</li>
+<li>
+<p><strong>Effect of Initial Velocity <span class="arithmatex">\( v_0 \)</span>:</strong> </p>
+</li>
+<li>Since <span class="arithmatex">\( R \propto v_0^2 \)</span>, doubling <span class="arithmatex">\( v_0 \)</span> quadruples the range.  </li>
+<li>
+<p>A higher velocity results in a greater overall displacement.  </p>
+</li>
+<li>
+<p><strong>Effect of Gravity <span class="arithmatex">\( g \)</span>:</strong> </p>
+</li>
+<li>Since <span class="arithmatex">\( R \propto \frac{1}{g} \)</span>, an increase in gravitational acceleration decreases the range.  </li>
+<li>
+<p>On planets with <strong>lower gravity</strong> (e.g., Moon, Mars), projectiles travel <strong>farther</strong> for the same <span class="arithmatex">\( v_0 \)</span>.  </p>
+</li>
+<li>
+<p><strong>Effect of Initial Height <span class="arithmatex">\( y_0 \)</span>:</strong> </p>
+</li>
+<li>If the projectile is launched from a height <span class="arithmatex">\( y_0 &gt; 0 \)</span>, range is extended due to a longer time of flight.  </li>
+<li>The range equation is modified to account for this additional height:  </li>
+</ol>
+<div class="arithmatex">\[
+t = \frac{v_0 \sin\theta + \sqrt{(v_0 \sin\theta)^2 + 2gy_0}}{g}
+\]</div>
+<div class="arithmatex">\[
+R = v_0 \cos\theta \cdot t
+\]</div>
+<hr/>
+<p><img alt="alt text" src="../image-1.png"/></p>
+<hr/>
+<h2 id="3-observations-from-graphs"><strong>3. Observations from Graphs</strong></h2>
+<ol>
+<li><strong>Effect of Velocity:</strong> </li>
+<li>
+<p>The peak of the curve shifts <strong>upward</strong> as <span class="arithmatex">\( v_0 \)</span> increases, confirming <span class="arithmatex">\( R \propto v_0^2 \)</span>.  </p>
+</li>
+<li>
+<p><strong>Effect of Height:</strong> </p>
+</li>
+<li>When <strong><span class="arithmatex">\( y_0 \)</span> increases</strong>, the range extends beyond <span class="arithmatex">\( \theta = 45^\circ \)</span>.  </li>
+<li>The maximum range shifts to a slightly <strong>lower</strong> angle (e.g., <span class="arithmatex">\( 40^\circ \)</span> instead of <span class="arithmatex">\( 45^\circ \)</span>).  </li>
+</ol>
+<hr/>
+<h2 id="4-limitations-extensions"><strong>4. Limitations &amp; Extensions</strong></h2>
+<h3 id="limitations"><strong>Limitations:</strong></h3>
+<ul>
+<li><strong>Ignores air resistance:</strong> In reality, air drag reduces range.  </li>
+<li><strong>No wind effects:</strong> Wind can <strong>increase/decrease</strong> range depending on direction.  </li>
+<li><strong>Flat terrain assumption:</strong> Uneven ground alters projectile trajectory.  </li>
+</ul>
+<h3 id="extensions"><strong>Extensions:</strong></h3>
+<ol>
+<li><strong>Air Resistance Model:</strong><br/>
+   [
+   F_{\text{drag}} = \frac{1}{2} C_d \rho A v^2
+   ]</li>
+<li>
+<p>Implementing numerical methods to model <strong>drag forces</strong>.  </p>
+</li>
+<li>
+<p><strong>Wind Influence:</strong> </p>
+</li>
+<li>Adding <strong>lateral forces</strong> for real-world accuracy.  </li>
+</ol>
+<hr/>
+<h2 id="5-conclusion"><strong>5. Conclusion</strong></h2>
+<ul>
+<li>The range follows a <strong>parabolic trend</strong> with respect to <span class="arithmatex">\( \theta \)</span>, maximizing at <strong><span class="arithmatex">\( 45^\circ \)</span></strong>.  </li>
+<li>Increasing <span class="arithmatex">\( v_0 \)</span> <strong>quadratically increases</strong> range.  </li>
+<li>Higher launch height shifts the optimal angle <strong>below</strong> <span class="arithmatex">\( 45^\circ \)</span>.  </li>
+<li>Gravity acts as an <strong>inverse factor</strong>, reducing the range when increased.  </li>
+</ul>
+<p>This provides a <strong>solid foundation</strong> for studying real-world projectile motion, from <strong>sports science</strong> (basketball, soccer) to <strong>aerospace applications</strong> (missile trajectory planning).  </p>
+<p>Would you like additional details or modifications? 🚀</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
