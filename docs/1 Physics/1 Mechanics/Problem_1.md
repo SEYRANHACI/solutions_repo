@@ -262,5 +262,67 @@ Then the range:
 2. **Wind effects:** Lateral forces modifying trajectory.
 3. **Numerical simulations:** Using differential equations for real-world modeling.
 
+1.4
+
+Projectile motion is governed by Newton's second law:
+
+\[
+F = ma
+\]
+
+For a projectile under gravity, the equations of motion are:
+
+#### **Equations of Motion:**
+1. **Horizontal Motion:**
+   \[
+   x(t) = v_0 \cos\theta \cdot t
+   \]
+2. **Vertical Motion:**
+   \[
+   y(t) = y_0 + v_0 \sin\theta \cdot t - \frac{1}{2} g t^2
+   \]
+
+#### **Time of Flight:**
+The time \( t \) when the projectile returns to the same height \( y_0 \) (assuming \( y_0 = 0 \)) is obtained by solving:
+
+\[
+0 = v_0 \sin\theta \cdot t - \frac{1}{2} g t^2
+\]
+
+\[
+t = \frac{2 v_0 \sin\theta}{g}
+\]
+
+#### **Range Formula:**
+The horizontal range \( R \) is given by:
+
+\[
+R = v_0 \cos\theta \cdot t
+\]
+
+Substituting \( t = \frac{2 v_0 \sin\theta}{g} \):
+
+\[
+R = \frac{v_0^2 \sin 2\theta}{g}
+\]
+
+If the projectile is launched from an initial height \( y_0 \neq 0 \), the range is:
+
+\[
+t = \frac{v_0 \sin\theta + \sqrt{(v_0 \sin\theta)^2 + 2 g y_0}}{g}
+\]
+
+\[
+R = v_0 \cos\theta \cdot t
+\]
+
+---
+
+![alt text](image-3.png)
+![alt text](image-4.png)
+
+
+
+
 
 
