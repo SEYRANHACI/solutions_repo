@@ -314,7 +314,68 @@ R = v_0 \cos\theta \cdot t
 <li>Gravity acts as an <strong>inverse factor</strong>, reducing the range when increased.  </li>
 </ul>
 <p>This provides a <strong>solid foundation</strong> for studying real-world projectile motion, from <strong>sports science</strong> (basketball, soccer) to <strong>aerospace applications</strong> (missile trajectory planning).  </p>
-<p>Would you like additional details or modifications? 🚀</p>
+<p>1.3 # Investigating the Range as a Function of the Angle of Projection</p>
+<h2 id="motivation">Motivation</h2>
+<p>Projectile motion, while seemingly simple, offers a rich playground for exploring fundamental principles of physics. The problem is straightforward: analyze how the range of a projectile depends on its angle of projection. Yet, beneath this simplicity lies a complex and versatile framework. The equations governing projectile motion involve both linear and quadratic relationships, making them accessible yet deeply insightful.</p>
+<p>What makes this topic particularly compelling is the number of free parameters involved in these equations, such as initial velocity, gravitational acceleration, and launch height. These parameters give rise to a diverse set of solutions that can describe a wide array of real-world phenomena, from the arc of a soccer ball to the trajectory of a rocket.</p>
+<h2 id="theoretical-foundation">Theoretical Foundation</h2>
+<h3 id="derivation-of-governing-equations">Derivation of Governing Equations</h3>
+<p>We begin with Newton's second law of motion, considering only gravity as the acting force (neglecting air resistance):</p>
+<div class="arithmatex">\[ F = ma = -mg\hat{y} \]</div>
+<p>This gives us two differential equations:
+- <strong>Horizontal motion (x-axis):</strong> [ d^2x/dt^2 = 0 ]
+- <strong>Vertical motion (y-axis):</strong> [ d^2y/dt^2 = -g ]</p>
+<p>Solving these with initial conditions:
+- Initial position: <span class="arithmatex">\( (0, y_0) \)</span>
+- Initial velocity: <span class="arithmatex">\( v_0 \)</span> at angle <span class="arithmatex">\( \theta \)</span>
+- Velocity components: <span class="arithmatex">\( v_{0x} = v_0 \cos\theta \)</span>, <span class="arithmatex">\( v_{0y} = v_0 \sin\theta \)</span></p>
+<p><strong>Equations of Motion:</strong>
+- [ x(t) = v_0 \cos\theta \cdot t ]
+- [ y(t) = y_0 + v_0 \sin\theta \cdot t - \frac{1}{2} g t^2 ]</p>
+<h3 id="range-calculation">Range Calculation</h3>
+<p>The range (<span class="arithmatex">\( R \)</span>) is the horizontal distance when the projectile returns to launch height (<span class="arithmatex">\( y=y_0 \)</span>).</p>
+<p>For <span class="arithmatex">\( y_0 = 0 \)</span>:
+[ 0 = v_0 \sin\theta \cdot t - \frac{1}{2} g t^2 ]
+Solving for time:
+[ t = \frac{2v_0 \sin\theta}{g} ]
+Thus, the range is:
+[ R = v_0 \cos\theta \cdot \frac{2v_0 \sin\theta}{g} = \frac{v_0^2 \sin 2\theta}{g} ]</p>
+<p>For <span class="arithmatex">\( y_0 \neq 0 \)</span>:
+Using the quadratic equation to find time:
+[ t = \frac{v_0 \sin\theta + \sqrt{(v_0 \sin\theta)^2 + 2 g y_0}}{g} ]
+Then the range:
+[ R = v_0 \cos\theta \cdot t ]</p>
+<p><img alt="alt text" src="../image-2.png"/></p>
+<h2 id="practical-applications">Practical Applications</h2>
+<h3 id="1-sports-science"><strong>1. Sports Science:</strong></h3>
+<ul>
+<li><strong>Soccer and basketball:</strong> Finding optimal angles for kicks or shots.</li>
+<li><strong>Golf:</strong> Accounting for lift and spin effects on the projectile.</li>
+</ul>
+<h3 id="2-military-applications"><strong>2. Military Applications:</strong></h3>
+<ul>
+<li><strong>Artillery calculations:</strong> Determining best angles for projectile range.</li>
+<li><strong>Rocket launches:</strong> Adjusting for gravity and atmospheric drag.</li>
+</ul>
+<h3 id="3-aerospace-and-space-exploration"><strong>3. Aerospace and Space Exploration:</strong></h3>
+<ul>
+<li><strong>Spacecraft landings:</strong> Adjusting for different planetary gravities.</li>
+<li><strong>Satellite deployments:</strong> Managing launch angles and velocities.</li>
+</ul>
+<h2 id="limitations-and-extensions"><strong>Limitations and Extensions</strong></h2>
+<h3 id="limitations_1"><strong>Limitations:</strong></h3>
+<ul>
+<li><strong>Ignores air resistance</strong> (significant for fast-moving objects).</li>
+<li><strong>No wind effects</strong> (crosswind alters trajectory).</li>
+<li><strong>Assumes level ground</strong> (terrain variations affect range).</li>
+</ul>
+<h3 id="extensions_1"><strong>Extensions:</strong></h3>
+<ol>
+<li><strong>Modeling air resistance:</strong>
+   [ F_{\text{drag}} = \frac{1}{2} C_d \rho A v^2 ]</li>
+<li><strong>Wind effects:</strong> Lateral forces modifying trajectory.</li>
+<li><strong>Numerical simulations:</strong> Using differential equations for real-world modeling.</li>
+</ol>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
