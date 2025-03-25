@@ -24,6 +24,8 @@ Let’s consider a projectile launched with:
   \]
 - **Vertical velocity**:  
   \[
+
+    
   v_{0y} = v_0 \sin(\theta)
   \]
 
