@@ -142,7 +142,7 @@ dt
 2
  
 d 
-2
+2s
  θ
 ​
  +β 
@@ -157,3 +157,4 @@ dθ
 This is the full nonlinear form (no small-angle approximation).
 
 ![alt text](image-6.png)
+...salam
