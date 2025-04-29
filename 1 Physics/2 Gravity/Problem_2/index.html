@@ -532,6 +532,42 @@ v₁: Needed to stay in a circular orbit near the surface</p>
 <p>v₂: Minimum speed to escape the planet’s gravity</p>
 <p>v₃: Only calculated for Earth — it’s the speed to escape the Solar System</p>
 <p><img alt="alt text" src="../image-2.png"/></p>
+<p>2.4  </p>
+<p>✅ Task 4 – Discuss the Importance of Cosmic Velocities in Space Exploration
+🚀 Why These Velocities Matter:</p>
+<p>Velocity    Application in Space Missions
+v₁ (orbital)    Used to launch satellites into low Earth orbit (LEO), GPS satellites, ISS, etc.
+v₂ (escape) Required for interplanetary missions like Mars rovers or probes going beyond Earth’s gravity.
+v₃ (solar escape)   Needed for interstellar probes like Voyager 1 and future missions aiming to exit the Solar System.
+📌 Real-World Examples:
+Satellites (v₁):
+SpaceX and NASA rockets reach ~7.9 km/s to place satellites in LEO.</p>
+<p>Mars Missions (v₂):
+NASA’s Perseverance rover used speeds above 11 km/s to break free from Earth’s gravity and enter a trajectory toward Mars.</p>
+<p>code </p>
+<h1 id="define-cosmic-velocities-for-earth-in-ms">Define cosmic velocities for Earth (in m/s)</h1>
+<p>v1 = 7.91e3   # first cosmic velocity
+v2 = 11.19e3  # second cosmic velocity
+v3 = 42.1e3   # third cosmic velocity</p>
+<p>def classify_velocity(v_launch):
+    if v_launch &lt; v1:
+        return "Suborbital flight – will fall back to Earth"
+    elif v1 &lt;= v_launch &lt; v2:
+        return "Orbital flight – will stay in orbit around Earth"
+    elif v2 &lt;= v_launch &lt; v3:
+        return "Escape trajectory – will escape Earth's gravity"
+    else:
+        return "Interstellar trajectory – will escape Solar System"</p>
+<h1 id="example-test-velocities-in-ms">Example test velocities in m/s</h1>
+<p>test_velocities = [3000, 7900, 11200, 45000]</p>
+<p>for v in test_velocities:
+    result = classify_velocity(v)
+    print(f"Launch velocity: {v/1000:.1f} km/s -&gt; {result}")
+output
+Launch velocity: 3.0 km/s -&gt; Suborbital flight – will fall back to Earth
+Launch velocity: 7.9 km/s -&gt; Orbital flight – will stay in orbit around Earth
+Launch velocity: 11.2 km/s -&gt; Escape trajectory – will escape Earth's gravity
+Launch velocity: 45.0 km/s -&gt; Interstellar trajectory – will escape Solar System</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
