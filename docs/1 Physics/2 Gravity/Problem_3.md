@@ -209,3 +209,37 @@ GM
 The object moves under this central force. So, using numerical integration (e.g., Runge-Kutta or Euler method), we can compute the path (trajectory) step-by-step.
 
 ![alt text](image-4.png)
+
+
+3.1.3
+
+Trajectory Types and Real Scenarios:
+1. Suborbital / Reentry Trajectory
+Condition: Initial speed < orbital speed (~7.8 km/s at low Earth orbit)
+
+Result: Payload follows an arc and eventually falls back to Earth
+
+Example: Space tourism flights (e.g., Blue Origin)
+
+2. Circular or Elliptical Orbit (Orbital Insertion)
+Condition: Initial speed ~7.8 km/s (circular) or slightly higher (elliptical)
+
+Result: Stable orbit if properly timed and angled
+
+Example: Satellites and ISS missions
+
+3. Escape Trajectory (Hyperbolic)
+Condition: Initial speed > 11.2 km/s (Earth escape velocity)
+
+Result: Payload leaves Earth’s gravitational influence
+
+Example: Interplanetary probes like Voyager, Mars rovers
+
+✈️ Application Summary:
+
+Trajectory Type	Required Speed (LEO)	Real-World Use
+Suborbital	< 7.8 km/s	Space tourism, test rockets
+Orbital (Circular/Elliptical)	≈ 7.8 – 11.2 km/s	Satellites, ISS missions
+Escape (Hyperbolic)	> 11.2 km/s	Interplanetary missions
+![alt text](image-6.png)
+
