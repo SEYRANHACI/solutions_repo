@@ -259,3 +259,59 @@ Calculated T: 2.37e+06 seconds
 Actual T: 2.36e+06 seconds
 Calculated T (in days): 27.30 days
 Actual T (in days): 27.30 days
+
+
+1.4  
+ Task 4: Implement a Computational Model to Simulate Circular Orbits and Verify Kepler's Third Law
+Objective:
+Simulate several circular orbits with different orbital radii, compute the corresponding orbital periods, and verify Kepler’s Third Law:
+
+𝑇
+2
+∝
+𝑟
+3
+T 
+2
+ ∝r 
+3
+ 
+1. Formula Used
+Kepler’s Third Law for circular orbits:
+
+𝑇
+2
+=
+4
+𝜋
+2
+𝑟
+3
+𝐺
+𝑀
+T 
+2
+ = 
+GM
+4π 
+2
+ r 
+3
+ 
+​
+ 
+Where:
+
+𝑇
+T is the orbital period (in seconds),
+
+𝑟
+r is the orbital radius (in meters),
+
+𝐺
+G is the gravitational constant,
+
+𝑀
+M is the mass of the central body (Earth, in this case).
+
+![alt text](image-1.png)
