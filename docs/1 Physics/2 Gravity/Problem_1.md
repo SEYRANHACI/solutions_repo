@@ -117,7 +117,10 @@ T
 3
  
 ![alt text](image.png)
-1.2    Task 2: Implications of Kepler’s Law in Astronomy
+
+1.2  
+
+  Task 2: Implications of Kepler’s Law in Astronomy
 📐 Kepler's Third Law:
 𝑇
 2
@@ -222,6 +225,8 @@ T=27.3×24×3600seconds
 
 import numpy as np
 
+
+
 # Constants
 G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
 M = 5.972e24     # Mass of Earth (kg)
@@ -262,6 +267,10 @@ Actual T (in days): 27.30 days
 
 
 1.4  
+
+
+
+
  Task 4: Implement a Computational Model to Simulate Circular Orbits and Verify Kepler's Third Law
 Objective:
 Simulate several circular orbits with different orbital radii, compute the corresponding orbital periods, and verify Kepler’s Third Law:
@@ -315,3 +324,5 @@ G is the gravitational constant,
 M is the mass of the central body (Earth, in this case).
 
 ![alt text](image-1.png)
+
+
