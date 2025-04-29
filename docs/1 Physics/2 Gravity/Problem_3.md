@@ -185,3 +185,27 @@ GMm
  
 And the object is traveling fast enough to escape Earth's gravity.
 ![alt text](image-3.png)
+
+3.1.2
+
+Step 1: Mathematical Model
+We'll use Newton's Second Law and Law of Universal Gravitation:
+
+Gravitational Acceleration:
+
+𝑎
+=
+𝐺
+𝑀
+𝑟
+2
+a= 
+r 
+2
+ 
+GM
+​
+ 
+The object moves under this central force. So, using numerical integration (e.g., Runge-Kutta or Euler method), we can compute the path (trajectory) step-by-step.
+
+![alt text](image-4.png)
