@@ -448,3 +448,28 @@ Second Cosmic Velocity (v2): 5.03 km/s
 Jupiter
 First Cosmic Velocity (v1): 42.57 km/s
 Second Cosmic Velocity (v2): 60.20 km/s
+
+2.3
+ Task 3 – Analyze Real-World Examples for Cosmic Velocities
+🎯 Goal:
+Calculate and visualize the first, second, and third cosmic velocities for Earth, Mars, and Jupiter — and understand what they mean in the context of space exploration.
+
+🧮 Real Data Used:
+
+Planet	Mass (kg)	Radius (m)
+Earth	5.972 × 10²⁴	6.371 × 10⁶
+Mars	6.417 × 10²³	3.390 × 10⁶
+Jupiter	1.898 × 10²⁷	6.991 × 10⁷
+🔢 Results (in km/s):
+
+Planet	v₁ (orbit)	v₂ (escape)	v₃ (escape Solar System)
+Earth	~7.91	~11.19	~42.1
+Mars	~3.55	~5.03	N/A
+Jupiter	~42.07	~59.54	N/A
+v₁: Needed to stay in a circular orbit near the surface
+
+v₂: Minimum speed to escape the planet’s gravity
+
+v₃: Only calculated for Earth — it’s the speed to escape the Solar System
+
+![alt text](image-2.png)
