@@ -328,6 +328,155 @@ Suborbital  &lt; 7.8 km/s  Space tourism, test rockets
 Orbital (Circular/Elliptical)   ≈ 7.8 – 11.2 km/s   Satellites, ISS missions
 Escape (Hyperbolic) &gt; 11.2 km/s Interplanetary missions
 <img alt="alt text" src="../image-6.png"/></p>
+<p>3.1.4</p>
+<p>✅ Fundamental Equations (Formulas)
+Newton’s Law of Gravitation:</p>
+<p>𝐹
+⃗
+𝑔
+𝑟
+𝑎
+𝑣
+𝑖
+𝑡
+𝑦
+=
+−
+𝐺
+𝑀
+𝑚
+𝑟
+2
+𝑟
+^
+F</p>
+<p>gravity
+​
+ =− 
+r 
+2</p>
+<p>GMm
+​</p>
+<p>r
+^</p>
+<p>𝐺
+G: gravitational constant</p>
+<p>𝑀
+M: mass of the Earth</p>
+<p>𝑚
+m: mass of the payload</p>
+<p>𝑟
+r: distance from Earth's center</p>
+<p>𝑟
+^
+r
+^
+ : unit vector in the radial direction</p>
+<p>The negative sign indicates the force is attractive.</p>
+<p>Newton’s Second Law (F = ma):</p>
+<p>𝑎
+⃗
+=
+𝐹
+⃗
+𝑚
+=
+−
+𝐺
+𝑀
+𝑟
+3
+𝑟
+⃗
+a
+ = 
+m
+F</p>
+<p>​
+ =− 
+r 
+3</p>
+<p>GM
+​</p>
+<p>r</p>
+<p>This gives the acceleration vector acting on the payload.</p>
+<p>Equations of motion (in 2D):</p>
+<p>𝑑
+2
+𝑥
+𝑑
+𝑡
+2
+=
+−
+𝐺
+𝑀
+𝑥
+(
+𝑥
+2
++
+𝑦
+2
+)
+3
+/
+2
+,
+𝑑
+2
+𝑦
+𝑑
+𝑡
+2
+=
+−
+𝐺
+𝑀
+𝑦
+(
+𝑥
+2
++
+𝑦
+2
+)
+3
+/
+2
+dt 
+2</p>
+<p>d 
+2
+ x
+​
+ =− 
+(x 
+2
+ +y 
+2
+ ) 
+3/2</p>
+<p>GMx
+​
+ , 
+dt 
+2</p>
+<p>d 
+2
+ y
+​
+ =− 
+(x 
+2
+ +y 
+2
+ ) 
+3/2</p>
+<p>GMy
+​</p>
+<p>These differential equations are solved numerically in the Python code using a simple Euler integration method.
+<img alt="alt text" src="../image-7.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
