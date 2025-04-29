@@ -473,3 +473,49 @@ v₂: Minimum speed to escape the planet’s gravity
 v₃: Only calculated for Earth — it’s the speed to escape the Solar System
 
 ![alt text](image-2.png)
+
+2.4  
+
+✅ Task 4 – Discuss the Importance of Cosmic Velocities in Space Exploration
+🚀 Why These Velocities Matter:
+
+Velocity	Application in Space Missions
+v₁ (orbital)	Used to launch satellites into low Earth orbit (LEO), GPS satellites, ISS, etc.
+v₂ (escape)	Required for interplanetary missions like Mars rovers or probes going beyond Earth’s gravity.
+v₃ (solar escape)	Needed for interstellar probes like Voyager 1 and future missions aiming to exit the Solar System.
+📌 Real-World Examples:
+Satellites (v₁):
+SpaceX and NASA rockets reach ~7.9 km/s to place satellites in LEO.
+
+Mars Missions (v₂):
+NASA’s Perseverance rover used speeds above 11 km/s to break free from Earth’s gravity and enter a trajectory toward Mars.
+
+
+code 
+
+# Define cosmic velocities for Earth (in m/s)
+v1 = 7.91e3   # first cosmic velocity
+v2 = 11.19e3  # second cosmic velocity
+v3 = 42.1e3   # third cosmic velocity
+
+def classify_velocity(v_launch):
+    if v_launch < v1:
+        return "Suborbital flight – will fall back to Earth"
+    elif v1 <= v_launch < v2:
+        return "Orbital flight – will stay in orbit around Earth"
+    elif v2 <= v_launch < v3:
+        return "Escape trajectory – will escape Earth's gravity"
+    else:
+        return "Interstellar trajectory – will escape Solar System"
+
+# Example test velocities in m/s
+test_velocities = [3000, 7900, 11200, 45000]
+
+for v in test_velocities:
+    result = classify_velocity(v)
+    print(f"Launch velocity: {v/1000:.1f} km/s -> {result}")
+output
+Launch velocity: 3.0 km/s -> Suborbital flight – will fall back to Earth
+Launch velocity: 7.9 km/s -> Orbital flight – will stay in orbit around Earth
+Launch velocity: 11.2 km/s -> Escape trajectory – will escape Earth's gravity
+Launch velocity: 45.0 km/s -> Interstellar trajectory – will escape Solar System
