@@ -243,3 +243,178 @@ Orbital (Circular/Elliptical)	≈ 7.8 – 11.2 km/s	Satellites, ISS missions
 Escape (Hyperbolic)	> 11.2 km/s	Interplanetary missions
 ![alt text](image-6.png)
 
+
+
+3.1.4
+
+✅ Fundamental Equations (Formulas)
+Newton’s Law of Gravitation:
+
+𝐹
+⃗
+𝑔
+𝑟
+𝑎
+𝑣
+𝑖
+𝑡
+𝑦
+=
+−
+𝐺
+𝑀
+𝑚
+𝑟
+2
+𝑟
+^
+F
+  
+gravity
+​
+ =− 
+r 
+2
+ 
+GMm
+​
+  
+r
+^
+ 
+𝐺
+G: gravitational constant
+
+𝑀
+M: mass of the Earth
+
+𝑚
+m: mass of the payload
+
+𝑟
+r: distance from Earth's center
+
+𝑟
+^
+r
+^
+ : unit vector in the radial direction
+
+The negative sign indicates the force is attractive.
+
+Newton’s Second Law (F = ma):
+
+𝑎
+⃗
+=
+𝐹
+⃗
+𝑚
+=
+−
+𝐺
+𝑀
+𝑟
+3
+𝑟
+⃗
+a
+ = 
+m
+F
+ 
+​
+ =− 
+r 
+3
+ 
+GM
+​
+  
+r
+ 
+This gives the acceleration vector acting on the payload.
+
+Equations of motion (in 2D):
+
+𝑑
+2
+𝑥
+𝑑
+𝑡
+2
+=
+−
+𝐺
+𝑀
+𝑥
+(
+𝑥
+2
++
+𝑦
+2
+)
+3
+/
+2
+,
+𝑑
+2
+𝑦
+𝑑
+𝑡
+2
+=
+−
+𝐺
+𝑀
+𝑦
+(
+𝑥
+2
++
+𝑦
+2
+)
+3
+/
+2
+dt 
+2
+ 
+d 
+2
+ x
+​
+ =− 
+(x 
+2
+ +y 
+2
+ ) 
+3/2
+ 
+GMx
+​
+ , 
+dt 
+2
+ 
+d 
+2
+ y
+​
+ =− 
+(x 
+2
+ +y 
+2
+ ) 
+3/2
+ 
+GMy
+​
+ 
+These differential equations are solved numerically in the Python code using a simple Euler integration method.
+![alt text](image-7.png)
