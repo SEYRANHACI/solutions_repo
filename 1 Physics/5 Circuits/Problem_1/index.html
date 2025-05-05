@@ -129,6 +129,133 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<p>circuits<br/>
+1.1</p>
+<p>🔹 Mathematical Concepts
+1. Series Rule:
+Resistors in series simply add:</p>
+<p>𝑅
+eq
+=
+𝑅
+1
++
+𝑅
+2
++
+⋯
++
+𝑅
+𝑛
+R 
+eq
+​
+ =R 
+1
+​
+ +R 
+2
+​
+ +⋯+R 
+n
+​</p>
+<ol>
+<li>Parallel Rule:
+Resistors in parallel combine reciprocally:</li>
+</ol>
+<p>1
+𝑅
+eq
+=
+1
+𝑅
+1
++
+1
+𝑅
+2
++
+⋯
++
+1
+𝑅
+𝑛
+R 
+eq
+​</p>
+<p>1
+​
+ = 
+R 
+1
+​</p>
+<p>1
+​
+ + 
+R 
+2
+​</p>
+<p>1
+​
+ +⋯+ 
+R 
+n
+​</p>
+<p>1
+​</p>
+<p>🔹 Algorithm Description (English)
+Step-by-step outline:
+Input: A graph 
+𝐺
+=
+(
+𝑉
+,
+𝐸
+)
+G=(V,E) with resistors as edge weights.</p>
+<p>Identify series connections:</p>
+<p>Look for nodes with exactly 2 neighbors (degree = 2).</p>
+<p>Combine the two connecting resistors in series.</p>
+<p>Identify parallel connections:</p>
+<p>Find multiple edges between the same two nodes.</p>
+<p>Combine them using the parallel rule.</p>
+<p>Reduce the graph iteratively until only 2 nodes remain: the source and target.</p>
+<p>Return the final resistance between these nodes.</p>
+<p>import networkx as nx</p>
+<p>def combine_parallel_resistors(resistances):
+    # Combine resistances in parallel: 1/R = 1/R1 + 1/R2 + ...
+    inverse_total = sum(1/r for r in resistances)
+    return 1 / inverse_total if inverse_total != 0 else float('inf')</p>
+<p>def simplify_circuit(G):
+    # Combine parallel resistors
+    edges_to_check = list(G.edges(data=True))
+    edge_dict = {}</p>
+<pre><code>for u, v, data in edges_to_check:
+    key = tuple(sorted((u, v)))
+    if key not in edge_dict:
+        edge_dict[key] = []
+    edge_dict[key].append(data['resistance'])
+
+# Rebuild the graph with combined resistors
+H = nx.Graph()
+for (u, v), resistances in edge_dict.items():
+    if len(resistances) == 1:
+        R_eq = resistances[0]
+    else:
+        R_eq = combine_parallel_resistors(resistances)
+    H.add_edge(u, v, resistance=R_eq)
+
+return H
+</code></pre>
+<h1 id="example-usage">Example usage</h1>
+<p>G = nx.MultiGraph()
+G.add_edge('A', 'B', resistance=2)
+G.add_edge('A', 'B', resistance=3)
+G.add_edge('B', 'C', resistance=4)</p>
+<p>simplified = simplify_circuit(G)
+for u, v, data in simplified.edges(data=True):
+    print(f"Edge {u}-{v}: {data['resistance']} Ohms")</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
