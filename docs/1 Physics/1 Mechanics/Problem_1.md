@@ -8,23 +8,24 @@
 
 Based on **Newton’s Second Law**, and assuming no air resistance:
 
-$$
-F = ma = -mg\hat{y}
-$$
+$$ F = ma = -mg\hat{y} $$
+
+
 
 This leads to two differential equations:
 
 * **Horizontal:**
 
-  $$
-  \frac{d^2x}{dt^2} = 0
-  $$
+  $$ \frac{d^2x}{dt^2} = 0 $$
+  
+  
 
 * **Vertical:**
 
-  $$
-  \frac{d^2y}{dt^2} = -g
-  $$
+  $$  \frac{d^2y}{dt^2} = -g   $$
+
+  
+  
 
 #### **2. Solving the Equations**
 
