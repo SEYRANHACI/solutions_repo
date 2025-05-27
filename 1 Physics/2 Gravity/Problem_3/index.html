@@ -60,6 +60,36 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 3</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#31-newtons-law-of-gravitation">3.1 Newton’s Law of Gravitation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#311-conservation-of-mechanical-energy">3.1.1 Conservation of Mechanical Energy</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#trajectory-types-based-on-energy">🚀 Trajectory Types Based on Energy</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-parabolic-trajectory-escape-velocity">1. Parabolic Trajectory – Escape velocity</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-elliptical-orbit">2. Elliptical Orbit</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-hyperbolic-trajectory">3. Hyperbolic Trajectory</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#312-mathematical-model-force-and-acceleration">3.1.2 Mathematical Model (Force and Acceleration)</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#313-real-world-trajectories">3.1.3 🚀 Real-World Trajectories</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#314-key-equations">3.1.4 ✅ Key Equations</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#newtons-law-of-gravitation-vector-form">Newton’s Law of Gravitation (Vector Form):</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#newtons-second-law">Newton’s Second Law:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#equations-of-motion-2d-form">Equations of Motion (2D Form):</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#visualization">📈 Visualization:</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -128,355 +158,134 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-3">Problem 3</h1>
-<p>31.1
-Newton's Law of Gravitation:</p>
-<p>The gravitational force acting on an object near Earth is:</p>
-<h1 id="f">𝐹</h1>
-<p>𝐺
-𝑀
-𝑚
-𝑟
-2
-F= 
-r 
-2</p>
-<p>GMm
-​</p>
+<p>Here’s a <strong>clean, simplified, and fully English version</strong> of the material you provided on <strong>Gravitational Motion and Trajectories</strong>, ideal for a project, study guide, or explanation:</p>
+<hr/>
+<h2 id="problem-3-gravitational-motion-and-space-trajectories">🌍 Problem 3 — Gravitational Motion and Space Trajectories</h2>
+<h3 id="31-newtons-law-of-gravitation">3.1 Newton’s Law of Gravitation</h3>
+<p>The gravitational force acting between Earth and a payload (e.g., a spacecraft or satellite) is:</p>
+<div class="arithmatex">\[
+F = \frac{GMm}{r^2}
+\]</div>
+<ul>
+<li><strong><span class="arithmatex">\(G\)</span></strong> – Gravitational constant: <span class="arithmatex">\(6.67430 \times 10^{-11} \ \mathrm{m^3 \cdot kg^{-1} \cdot s^{-2}}\)</span></li>
+<li><strong><span class="arithmatex">\(M\)</span></strong> – Mass of Earth: <span class="arithmatex">\(5.972 \times 10^{24} \ \mathrm{kg}\)</span></li>
+<li><strong><span class="arithmatex">\(m\)</span></strong> – Mass of the object/payload</li>
+<li><strong><span class="arithmatex">\(r\)</span></strong> – Distance from the center of the Earth</li>
+</ul>
+<hr/>
+<h3 id="311-conservation-of-mechanical-energy">3.1.1 Conservation of Mechanical Energy</h3>
+<p>The total mechanical energy <span class="arithmatex">\(E\)</span> (kinetic + potential) of a payload in motion is:</p>
+<div class="arithmatex">\[
+E = \frac{1}{2}mv^2 - \frac{GMm}{r}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(v\)</span>: Speed of the object</li>
+<li><span class="arithmatex">\(r\)</span>: Distance from Earth’s center</li>
+</ul>
+<hr/>
+<h3 id="trajectory-types-based-on-energy">🚀 Trajectory Types Based on Energy</h3>
+<h4 id="1-parabolic-trajectory-escape-velocity">1. <strong>Parabolic Trajectory</strong> – Escape velocity</h4>
+<ul>
+<li>Total Energy <span class="arithmatex">\(E = 0\)</span></li>
+<li>Condition:</li>
+</ul>
+<p>$$
+  \frac{1}{2}mv^2 = \frac{GMm}{r}
+  $$
+* Follows a parabolic path; just escapes Earth’s gravity.</p>
+<h4 id="2-elliptical-orbit">2. <strong>Elliptical Orbit</strong></h4>
+<ul>
+<li>Total Energy <span class="arithmatex">\(E &lt; 0\)</span></li>
+<li>Equation:</li>
+</ul>
+<p>$$
+  E = -\frac{GMm}{2a}
+  $$
+* <span class="arithmatex">\(a\)</span>: Semi-major axis of the elliptical orbit</p>
+<h4 id="3-hyperbolic-trajectory">3. <strong>Hyperbolic Trajectory</strong></h4>
+<ul>
+<li>Total Energy <span class="arithmatex">\(E &gt; 0\)</span></li>
+<li>Object escapes Earth’s gravity at high speed.</li>
+</ul>
+<hr/>
+<h3 id="312-mathematical-model-force-and-acceleration">3.1.2 Mathematical Model (Force and Acceleration)</h3>
+<p>Using <strong>Newton’s Second Law</strong> and <strong>Universal Gravitation</strong>:</p>
+<div class="arithmatex">\[
+\vec{a} = -\frac{GM}{r^3} \vec{r}
+\]</div>
 <p>Where:</p>
-<p>𝐺
-G is the gravitational constant (
-6.67430
-×
-10
-−
-11
- 
-m
-3
-kg
-−
-1
-s
-−
-2
-6.67430×10 
-−11
- m 
-3
- kg 
-−1
- s 
-−2
- ),</p>
-<p>𝑀
-M is Earth's mass (
-5.972
-×
-10
-24
- 
-kg
-5.972×10 
-24
- kg),</p>
-<p>𝑚
-m is the payload mass,</p>
-<p>𝑟
-r is the distance from the Earth's center.</p>
-<p>Conservation of Mechanical Energy:</p>
-<p>The total mechanical energy (kinetic + potential) is conserved. The total energy 
-𝐸
-E is given by:</p>
-<h1 id="e">𝐸</h1>
-<p>1
-2
-𝑚
-𝑣
-2
-−
-𝐺
-𝑀
-𝑚
-𝑟
-E= 
-2
-1
-​
- mv 
-2
- − 
-r
-GMm
-​</p>
-<p>Where:</p>
-<p>𝑣
-v is the velocity of the object,</p>
-<p>𝑟
-r is the distance from Earth's center.</p>
-<p>For Different Trajectories:</p>
-<p>Parabolic Trajectory: The object has exactly enough energy to escape Earth's gravity and follow a parabolic path. The total energy 
-𝐸
-=
-0
-E=0. Therefore, the initial velocity for a parabolic trajectory is:</p>
-<p>1
-2
-𝑚
-𝑣
-2
-=
-𝐺
-𝑀
-𝑚
-𝑟
-2
-1
-​
- mv 
-2
- = 
-r
-GMm
-​</p>
-<p>This means the object is launched at escape velocity but not with enough speed to form an elliptical or hyperbolic orbit.</p>
-<p>Elliptical Trajectory: When the object’s total energy is negative (
-𝐸
-&lt;
-0
-E&lt;0), it follows an elliptical orbit. The orbital energy for elliptical orbits is:</p>
-<h1 id="e_1">𝐸</h1>
-<p>−
-𝐺
-𝑀
-𝑚
-2
-𝑎
-E=− 
-2a
-GMm
-​</p>
-<p>Where 
-𝑎
-a is the semi-major axis of the ellipse.</p>
-<p>Hyperbolic Trajectory: When the object's total energy is positive (
-𝐸</p>
-<blockquote>
-<p>0
-E&gt;0), it follows a hyperbolic trajectory and escapes Earth’s gravitational influence. The trajectory equation is:</p>
-</blockquote>
-<h1 id="e_2">𝐸</h1>
-<p>1
-2
-𝑚
-𝑣
-2
-−
-𝐺
-𝑀
-𝑚
-𝑟
-E= 
-2
-1
-​
- mv 
-2
- − 
-r
-GMm
-​</p>
-<p>And the object is traveling fast enough to escape Earth's gravity.
-<img alt="alt text" src="../image-3.png"/></p>
-<p>3.1.2</p>
-<p>Step 1: Mathematical Model
-We'll use Newton's Second Law and Law of Universal Gravitation:</p>
-<p>Gravitational Acceleration:</p>
-<h1 id="a">𝑎</h1>
-<p>𝐺
-𝑀
-𝑟
-2
-a= 
-r 
-2</p>
-<p>GM
-​</p>
-<p>The object moves under this central force. So, using numerical integration (e.g., Runge-Kutta or Euler method), we can compute the path (trajectory) step-by-step.</p>
-<p><img alt="alt text" src="../image-4.png"/></p>
-<p>3.1.3</p>
-<p>Trajectory Types and Real Scenarios:
-1. Suborbital / Reentry Trajectory
-Condition: Initial speed &lt; orbital speed (~7.8 km/s at low Earth orbit)</p>
-<p>Result: Payload follows an arc and eventually falls back to Earth</p>
-<p>Example: Space tourism flights (e.g., Blue Origin)</p>
-<ol>
-<li>Circular or Elliptical Orbit (Orbital Insertion)
-Condition: Initial speed ~7.8 km/s (circular) or slightly higher (elliptical)</li>
-</ol>
-<p>Result: Stable orbit if properly timed and angled</p>
-<p>Example: Satellites and ISS missions</p>
-<ol>
-<li>Escape Trajectory (Hyperbolic)
-Condition: Initial speed &gt; 11.2 km/s (Earth escape velocity)</li>
-</ol>
-<p>Result: Payload leaves Earth’s gravitational influence</p>
-<p>Example: Interplanetary probes like Voyager, Mars rovers</p>
-<p>✈️ Application Summary:</p>
-<p>Trajectory Type Required Speed (LEO)    Real-World Use
-Suborbital  &lt; 7.8 km/s  Space tourism, test rockets
-Orbital (Circular/Elliptical)   ≈ 7.8 – 11.2 km/s   Satellites, ISS missions
-Escape (Hyperbolic) &gt; 11.2 km/s Interplanetary missions
-<img alt="alt text" src="../image-6.png"/></p>
-<p>3.1.4</p>
-<p>✅ Fundamental Equations (Formulas)
-Newton’s Law of Gravitation:</p>
-<p>𝐹
-⃗
-𝑔
-𝑟
-𝑎
-𝑣
-𝑖
-𝑡
-𝑦
-=
-−
-𝐺
-𝑀
-𝑚
-𝑟
-2
-𝑟
-^
-F</p>
-<p>gravity
-​
- =− 
-r 
-2</p>
-<p>GMm
-​</p>
-<p>r
-^</p>
-<p>𝐺
-G: gravitational constant</p>
-<p>𝑀
-M: mass of the Earth</p>
-<p>𝑚
-m: mass of the payload</p>
-<p>𝑟
-r: distance from Earth's center</p>
-<p>𝑟
-^
-r
-^
- : unit vector in the radial direction</p>
-<p>The negative sign indicates the force is attractive.</p>
-<p>Newton’s Second Law (F = ma):</p>
-<p>𝑎
-⃗
-=
-𝐹
-⃗
-𝑚
-=
-−
-𝐺
-𝑀
-𝑟
-3
-𝑟
-⃗
-a
- = 
-m
-F</p>
-<p>​
- =− 
-r 
-3</p>
-<p>GM
-​</p>
-<p>r</p>
-<p>This gives the acceleration vector acting on the payload.</p>
-<p>Equations of motion (in 2D):</p>
-<p>𝑑
-2
-𝑥
-𝑑
-𝑡
-2
-=
-−
-𝐺
-𝑀
-𝑥
-(
-𝑥
-2
-+
-𝑦
-2
-)
-3
-/
-2
-,
-𝑑
-2
-𝑦
-𝑑
-𝑡
-2
-=
-−
-𝐺
-𝑀
-𝑦
-(
-𝑥
-2
-+
-𝑦
-2
-)
-3
-/
-2
-dt 
-2</p>
-<p>d 
-2
- x
-​
- =− 
-(x 
-2
- +y 
-2
- ) 
-3/2</p>
-<p>GMx
-​
- , 
-dt 
-2</p>
-<p>d 
-2
- y
-​
- =− 
-(x 
-2
- +y 
-2
- ) 
-3/2</p>
-<p>GMy
-​</p>
-<p>These differential equations are solved numerically in the Python code using a simple Euler integration method.
-<img alt="alt text" src="../image-7.png"/></p>
+<ul>
+<li><span class="arithmatex">\(\vec{a}\)</span>: Acceleration vector</li>
+<li><span class="arithmatex">\(\vec{r}\)</span>: Position vector</li>
+<li><span class="arithmatex">\(r = \sqrt{x^2 + y^2}\)</span></li>
+</ul>
+<p>This is a <strong>central force problem</strong>, often solved using numerical methods like Euler or Runge-Kutta.</p>
+<hr/>
+<h3 id="313-real-world-trajectories">3.1.3 🚀 Real-World Trajectories</h3>
+<table>
+<thead>
+<tr>
+<th>Trajectory Type</th>
+<th>Required Speed (from LEO)</th>
+<th>Real-World Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Suborbital</strong></td>
+<td>&lt; 7.8 km/s</td>
+<td>Blue Origin space tourism</td>
+</tr>
+<tr>
+<td><strong>Orbital (Circular)</strong></td>
+<td>≈ 7.8 km/s</td>
+<td>Satellites, ISS</td>
+</tr>
+<tr>
+<td><strong>Elliptical Orbit</strong></td>
+<td>7.8 – 11.2 km/s</td>
+<td>Geostationary satellites, transfer orbits</td>
+</tr>
+<tr>
+<td><strong>Escape (Hyperbolic)</strong></td>
+<td>&gt; 11.2 km/s</td>
+<td>Voyager, Mars rovers</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>LEO</strong>: Low Earth Orbit</li>
+<li><strong>ISS</strong>: International Space Station</li>
+</ul>
+<hr/>
+<h3 id="314-key-equations">3.1.4 ✅ Key Equations</h3>
+<h4 id="newtons-law-of-gravitation-vector-form">Newton’s Law of Gravitation (Vector Form):</h4>
+<div class="arithmatex">\[
+\vec{F}_g = -\frac{GMm}{r^2} \hat{r}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(\hat{r}\)</span>: Unit vector in radial direction</li>
+<li>Negative sign means the force is attractive (toward Earth)</li>
+</ul>
+<h4 id="newtons-second-law">Newton’s Second Law:</h4>
+<div class="arithmatex">\[
+\vec{a} = \frac{\vec{F}}{m} = -\frac{GM}{r^3} \vec{r}
+\]</div>
+<h4 id="equations-of-motion-2d-form">Equations of Motion (2D Form):</h4>
+<div class="arithmatex">\[
+\frac{d^2x}{dt^2} = -\frac{GMx}{(x^2 + y^2)^{3/2}}, \quad \frac{d^2y}{dt^2} = -\frac{GMy}{(x^2 + y^2)^{3/2}}
+\]</div>
+<p>These are solved using numerical methods (e.g., Euler integration) in Python simulations.</p>
+<hr/>
+<h3 id="visualization">📈 Visualization:</h3>
+<p>Numerical simulations can visualize trajectories like:</p>
+<ul>
+<li>Arcs (suborbital)</li>
+<li>Circles and ellipses (orbital)</li>
+<li>Hyperbolas (escape)</li>
+</ul>
+<hr/>
+<p>Would you like this formatted into a <strong>PDF</strong> or <strong>PowerPoint presentation</strong>?</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
