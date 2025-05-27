@@ -83,6 +83,8 @@
 <li class="toctree-l1 current"><a class="reference internal current">6 Statistics</a>
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<ul class="current">
+</ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
 </li>
@@ -126,163 +128,30 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<p>statitics</p>
-<p>1.1 Mathematical Foundation (Population Distribution)
-Let 
-𝑋
-X be a random variable drawn from a population distribution with:</p>
-<p>Mean: 
-𝜇
-=
-𝐸
-[
-𝑋
-]
-μ=E[X]</p>
-<p>Variance: 
-𝜎
-2
-=
-Var
-(
-𝑋
-)
-σ 
-2
- =Var(X)</p>
-<p>We define the sample mean for a sample of size 
-𝑛
-n as:</p>
-<p>𝑋
-ˉ
-𝑛
-=
-1
-𝑛
-∑
-𝑖
-=
-1
-𝑛
-𝑋
-𝑖
-X
-ˉ</p>
-<p>n
-​
- = 
-n
-1
-​</p>
-<p>i=1
-∑
-n
-​
- X 
-i
-​</p>
-<p>According to the Central Limit Theorem, as 
-𝑛
-→
-∞
-n→∞, the distribution of 
-𝑋
-ˉ
-𝑛
-X
-ˉ</p>
-<p>n
-​
-  tends toward:</p>
-<p>𝑋
-ˉ
-𝑛
-∼
-𝑁
-(
-𝜇
-,
-𝜎
-2
-𝑛
-)
-X
-ˉ</p>
-<p>n
-​
- ∼N(μ, 
-n
-σ 
-2</p>
-<p>​
- )
-<img alt="alt text" src="../image.png"/>
-<img alt="alt text" src="../image-1.png"/>
-<img alt="alt text" src="../image-2.png"/></p>
-<p>1.2
-Mathematical Background
-Given a population with mean 
-𝜇
-μ and variance 
-𝜎
-2
-σ 
-2
- , the sampling distribution of the sample mean for sample size 
-𝑛
-n is:</p>
-<p>𝑋
-ˉ
-𝑛
-=
-1
-𝑛
-∑
-𝑖
-=
-1
-𝑛
-𝑋
-𝑖
-∼
-𝑁
-(
-𝜇
-,
-𝜎
-2
-𝑛
-)
-as 
-𝑛
-→
-∞
-X
-ˉ</p>
-<p>n
-​
- = 
-n
-1
-​</p>
-<p>i=1
-∑
-n
-​
- X 
-i
-​
- ∼N(μ, 
-n
-σ 
-2</p>
-<p>​
- )as n→∞
-This means regardless of the original distribution, the distribution of sample means will tend to a normal distribution as sample size increases.</p>
-<p><img alt="alt text" src="../image-3.png"/>
-<img alt="alt text" src="../image-4.png"/>
-<img alt="alt text" src="../image-5.png"/>
-<img alt="alt text" src="../image-6.png"/></p>
+<h3 id="task-1-simulating-population-distributions">Task 1: Simulating Population Distributions</h3>
+<p>In this first part of the Central Limit Theorem (CLT) exploration, we begin by creating large datasets to represent different types of population distributions:</p>
+<ul>
+<li><strong>Uniform Distribution</strong>: Values are equally likely within a range (0 to 10).</li>
+<li><strong>Exponential Distribution</strong>: Skewed right; models wait times or lifetimes (scale = 2).</li>
+<li><strong>Binomial Distribution</strong>: Discrete distribution representing the number of successes in 10 trials with probability 0.5.</li>
+</ul>
+<p>The histograms above visualize the shape of each distribution. These populations will be used in the next task to sample and observe how the sample means behave according to the CLT.</p>
+<p>Let me know if you're ready to proceed to <strong>Task 2: Sampling and Visualization</strong>.</p>
+<h3 id="task-2-sampling-and-visualization"><strong>Task 2: Sampling and Visualization</strong></h3>
+<p>We now investigate how sample size affects the distribution of sample means for different population types (Uniform, Exponential, Binomial). For each case:</p>
+<ul>
+<li>We take random samples of sizes 5, 10, 30, and 50.</li>
+<li>We compute the mean of each sample.</li>
+<li>We repeat this process 1000 times to build a <strong>sampling distribution</strong>.</li>
+<li>Then we <strong>plot histograms</strong> to visualize how these sample means begin to resemble a <strong>normal distribution</strong> as the sample size increases.</li>
+</ul>
+<h4 id="observations">🔍 Observations:</h4>
+<ul>
+<li>For small sample sizes (e.g., 5), the sampling distribution reflects the skewness of the original population.</li>
+<li>As the sample size increases, all sampling distributions begin to take on a <strong>bell-shaped curve</strong>, aligning with the <strong>Central Limit Theorem</strong>.</li>
+<li>The convergence to normality occurs faster for symmetric distributions (like Uniform or Binomial) compared to skewed ones (like Exponential).</li>
+</ul>
+<p>Let me know when you’re ready for <strong>Task 3: Parameter Exploration</strong>.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
