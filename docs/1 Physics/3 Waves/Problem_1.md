@@ -16,7 +16,7 @@ $$
 \eta(x, y, t) = \frac{A}{\sqrt{r}} \cos(kr - \omega t + \phi)
 $$
 
-Where:
+Where:s
 
 * $r = \sqrt{(x - x_0)^2 + (y - y_0)^2}$ denotes the distance from the observation point $(x, y)$ to the source position $(x_0, y_0)$,
 * $k = \frac{2\pi}{\lambda}$ represents the wave number, with $\lambda$ being the wavelength,
