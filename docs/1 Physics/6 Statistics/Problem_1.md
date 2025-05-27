@@ -7,7 +7,7 @@ In this first part of the Central Limit Theorem (CLT) exploration, we begin by c
 * **Binomial Distribution**: Discrete distribution representing the number of successes in 10 trials with probability 0.5.
 
 The histograms above visualize the shape of each distribution. These populations will be used in the next task to sample and observe how the sample means behave according to the CLT.
-
+ ![alt text](image-7.png)
 Let me know if you're ready to proceed to **Task 2: Sampling and Visualization**.
 
 
@@ -25,7 +25,7 @@ We now investigate how sample size affects the distribution of sample means for 
 * For small sample sizes (e.g., 5), the sampling distribution reflects the skewness of the original population.
 * As the sample size increases, all sampling distributions begin to take on a **bell-shaped curve**, aligning with the **Central Limit Theorem**.
 * The convergence to normality occurs faster for symmetric distributions (like Uniform or Binomial) compared to skewed ones (like Exponential).
-
+![alt text](image-8.png)
 Let me know when you’re ready for **Task 3: Parameter Exploration**.
 
 Təşəkkür edirəm! Bəli, haqlısınız — **1-ci əsas tapşırığın** içində **3 alt tapşırıq** var idi, və indi gəlin **3-cünü (Parameter Exploration)** tam şəkildə **həll** edək (simulyasiya və kodla birlikdə).
