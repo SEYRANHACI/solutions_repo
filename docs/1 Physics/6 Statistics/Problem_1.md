@@ -1,175 +1,29 @@
-statitics
+### Task 1: Simulating Population Distributions
 
-1.1 Mathematical Foundation (Population Distribution)
-Let 
-𝑋
-X be a random variable drawn from a population distribution with:
+In this first part of the Central Limit Theorem (CLT) exploration, we begin by creating large datasets to represent different types of population distributions:
 
-Mean: 
-𝜇
-=
-𝐸
-[
-𝑋
-]
-μ=E[X]
+* **Uniform Distribution**: Values are equally likely within a range (0 to 10).
+* **Exponential Distribution**: Skewed right; models wait times or lifetimes (scale = 2).
+* **Binomial Distribution**: Discrete distribution representing the number of successes in 10 trials with probability 0.5.
 
-Variance: 
-𝜎
-2
-=
-Var
-(
-𝑋
-)
-σ 
-2
- =Var(X)
+The histograms above visualize the shape of each distribution. These populations will be used in the next task to sample and observe how the sample means behave according to the CLT.
 
-We define the sample mean for a sample of size 
-𝑛
-n as:
+Let me know if you're ready to proceed to **Task 2: Sampling and Visualization**.
 
-𝑋
-ˉ
-𝑛
-=
-1
-𝑛
-∑
-𝑖
-=
-1
-𝑛
-𝑋
-𝑖
-X
-ˉ
-  
-n
-​
- = 
-n
-1
-​
-  
-i=1
-∑
-n
-​
- X 
-i
-​
- 
-According to the Central Limit Theorem, as 
-𝑛
-→
-∞
-n→∞, the distribution of 
-𝑋
-ˉ
-𝑛
-X
-ˉ
-  
-n
-​
-  tends toward:
 
-𝑋
-ˉ
-𝑛
-∼
-𝑁
-(
-𝜇
-,
-𝜎
-2
-𝑛
-)
-X
-ˉ
-  
-n
-​
- ∼N(μ, 
-n
-σ 
-2
- 
-​
- )
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
+### **Task 2: Sampling and Visualization**
 
-1.2
-Mathematical Background
-Given a population with mean 
-𝜇
-μ and variance 
-𝜎
-2
-σ 
-2
- , the sampling distribution of the sample mean for sample size 
-𝑛
-n is:
+We now investigate how sample size affects the distribution of sample means for different population types (Uniform, Exponential, Binomial). For each case:
 
-𝑋
-ˉ
-𝑛
-=
-1
-𝑛
-∑
-𝑖
-=
-1
-𝑛
-𝑋
-𝑖
-∼
-𝑁
-(
-𝜇
-,
-𝜎
-2
-𝑛
-)
-as 
-𝑛
-→
-∞
-X
-ˉ
-  
-n
-​
- = 
-n
-1
-​
-  
-i=1
-∑
-n
-​
- X 
-i
-​
- ∼N(μ, 
-n
-σ 
-2
- 
-​
- )as n→∞
-This means regardless of the original distribution, the distribution of sample means will tend to a normal distribution as sample size increases.
+* We take random samples of sizes 5, 10, 30, and 50.
+* We compute the mean of each sample.
+* We repeat this process 1000 times to build a **sampling distribution**.
+* Then we **plot histograms** to visualize how these sample means begin to resemble a **normal distribution** as the sample size increases.
 
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
+#### 🔍 Observations:
+
+* For small sample sizes (e.g., 5), the sampling distribution reflects the skewness of the original population.
+* As the sample size increases, all sampling distributions begin to take on a **bell-shaped curve**, aligning with the **Central Limit Theorem**.
+* The convergence to normality occurs faster for symmetric distributions (like Uniform or Binomial) compared to skewed ones (like Exponential).
+
+Let me know when you’re ready for **Task 3: Parameter Exploration**.
