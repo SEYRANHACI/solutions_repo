@@ -152,6 +152,84 @@
 <li>The convergence to normality occurs faster for symmetric distributions (like Uniform or Binomial) compared to skewed ones (like Exponential).</li>
 </ul>
 <p>Let me know when you’re ready for <strong>Task 3: Parameter Exploration</strong>.</p>
+<p>Təşəkkür edirəm! Bəli, haqlısınız — <strong>1-ci əsas tapşırığın</strong> içində <strong>3 alt tapşırıq</strong> var idi, və indi gəlin <strong>3-cünü (Parameter Exploration)</strong> tam şəkildə <strong>həll</strong> edək (simulyasiya və kodla birlikdə).</p>
+<hr/>
+<h2 id="task-13-parameter-exploration-simulation-and-analysis">✅ <strong>Task 1.3: Parameter Exploration — Simulation and Analysis</strong></h2>
+<h3 id="goal">🎯 Goal:</h3>
+<p>To understand how the <strong>original distribution</strong>, <strong>sample size</strong>, and <strong>population variance</strong> affect the shape and spread of the <strong>sampling distribution of the mean</strong>.</p>
+<hr/>
+<h3 id="simulation-with-python">📊 Simulation with Python</h3>
+<p>We'll use the <strong>Exponential distribution</strong> (which is skewed) and vary the <strong>sample sizes</strong> to see the effect on the distribution of sample means.</p>
+<h4 id="libraries">✅ Libraries:</h4>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+np.random.seed(42)
+</code></pre>
+<hr/>
+<h3 id="simulate-sampling-distribution">🧪 Simulate Sampling Distribution</h3>
+<h4 id="function-to-generate-and-plot-sampling-distributions">Function to generate and plot sampling distributions:</h4>
+<pre><code class="language-python">def simulate_sampling_distribution(population, sample_sizes, n_simulations=1000):
+    for n in sample_sizes:
+        sample_means = []
+        for _ in range(n_simulations):
+            sample = np.random.choice(population, size=n, replace=True)
+            sample_means.append(np.mean(sample))
+
+        plt.figure(figsize=(7, 4))
+        sns.histplot(sample_means, kde=True, stat="density", bins=30, color='skyblue')
+        plt.title(f"Sampling Distribution (n={n})")
+        plt.xlabel("Sample Mean")
+        plt.ylabel("Density")
+        plt.grid(True)
+        plt.show()
+</code></pre>
+<hr/>
+<h3 id="create-population-and-run-simulation">🧮 Create Population and Run Simulation</h3>
+<pre><code class="language-python"># Create a skewed population (Exponential)
+population = np.random.exponential(scale=2.0, size=100_000)
+
+# Sample sizes to explore
+sample_sizes = [5, 10, 30, 50]
+
+# Run the simulation
+simulate_sampling_distribution(population, sample_sizes)
+</code></pre>
+<hr/>
+<h3 id="interpretation">📌 Interpretation</h3>
+<h4 id="1-effect-of-original-distribution">1. <strong>Effect of Original Distribution</strong>:</h4>
+<ul>
+<li>Since exponential is <strong>skewed</strong>, small sample sizes yield <strong>skewed sample mean distributions</strong>.</li>
+<li>As <strong>n increases</strong>, the distribution of sample means <strong>becomes more normal</strong>, despite the original skewness.</li>
+</ul>
+<h4 id="2-effect-of-sample-size">2. <strong>Effect of Sample Size</strong>:</h4>
+<ul>
+<li>Larger sample sizes (n ≥ 30) yield sample mean distributions that are <strong>approximately normal</strong>.</li>
+<li>CLT holds better for larger n.</li>
+</ul>
+<h4 id="3-effect-of-population-variance">3. <strong>Effect of Population Variance</strong>:</h4>
+<p>Let’s test different variances:</p>
+<pre><code class="language-python"># Compare two exponential populations with different variances
+population_low_var = np.random.exponential(scale=1.0, size=100_000)  # Lower variance
+population_high_var = np.random.exponential(scale=3.0, size=100_000) # Higher variance
+
+simulate_sampling_distribution(population_low_var, [30])
+simulate_sampling_distribution(population_high_var, [30])
+</code></pre>
+<ul>
+<li>The <strong>higher the population variance</strong>, the <strong>wider the sampling distribution</strong>.</li>
+<li>But shape (normality) remains consistent as long as sample size is sufficient.</li>
+</ul>
+<hr/>
+<h3 id="summary">✅ Summary:</h3>
+<ul>
+<li><strong>Skewed populations</strong> need <strong>larger samples</strong> to produce normally distributed sample means.</li>
+<li><strong>Larger sample sizes</strong> increase accuracy of CLT.</li>
+<li><strong>Higher variance</strong> → wider sampling distributions, but doesn’t affect shape of convergence.</li>
+</ul>
+<hr/>
+<p>Let me know when you're ready for <strong>Task 1.4: Practical Applications</strong> or the next major problem.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
