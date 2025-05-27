@@ -1,4 +1,4 @@
-Sure! Here's your content rewritten concisely in clear academic English with paragraph structure and phrasing (pharase-ed) for use in a report or presentation — no mathematical or technical changes have been made, as requested:
+Certainly! Here's your content further refined and **phrasalized** for academic clarity and natural flow, while preserving the original mathematical and technical structure:
 
 ---
 
@@ -6,38 +6,38 @@ Sure! Here's your content rewritten concisely in clear academic English with par
 
 ## **1.1 Overview**
 
-The aim of this problem is to investigate the **interference patterns** produced by circular waves that originate from the **vertices of a regular polygon**, such as a triangle, square, or pentagon. As these wavefronts propagate outward and interact, they form distinct regions of **constructive interference**—where the wave amplitudes reinforce each other—and **destructive interference**, where they cancel out. This setup provides insight into how spatial symmetry and phase relationships influence wave behavior.
+This problem focuses on the investigation of **interference patterns** formed by circular water waves that originate from the **vertices of a regular polygon**—such as a triangle, square, or pentagon. As these wavefronts radiate outward from each vertex, they interact with one another, producing regions of **constructive interference** (where wave amplitudes reinforce each other) and **destructive interference** (where they cancel each other out). The symmetry of the geometric arrangement plays a key role in shaping the resulting wave patterns and highlights the fundamental principles of wave superposition.
 
 ## **1.2 Mathematical Model**
 
-Each point source emits a circular wave that can be described by the following formula:
+Each source emits a radially symmetric (circular) wave, mathematically described by the following expression:
 
 $$
 \eta(x, y, t) = \frac{A}{\sqrt{r}} \cos(kr - \omega t + \phi)
 $$
 
-In this expression:
+Where:
 
-* $r = \sqrt{(x - x_0)^2 + (y - y_0)^2}$ is the distance from the observation point $(x, y)$ to the source position $(x_0, y_0)$,
-* $k = \frac{2\pi}{\lambda}$ is the wave number, where $\lambda$ is the wavelength,
-* $\omega = 2\pi f$ is the angular frequency, with $f$ being the frequency of oscillation,
+* $r = \sqrt{(x - x_0)^2 + (y - y_0)^2}$ denotes the distance from the observation point $(x, y)$ to the source position $(x_0, y_0)$,
+* $k = \frac{2\pi}{\lambda}$ represents the wave number, with $\lambda$ being the wavelength,
+* $\omega = 2\pi f$ is the angular frequency, where $f$ is the wave frequency,
 * $A$ is the amplitude of the wave,
-* $\phi$ is the initial phase offset.
+* $\phi$ is the phase constant, representing the initial phase shift.
 
-The term $1/\sqrt{r}$ accounts for the decay in amplitude with distance in a two-dimensional wave propagation model.
+The factor $1/\sqrt{r}$ reflects the attenuation of wave amplitude with distance, which is typical for wave propagation in a two-dimensional medium.
 
 ## **1.3 Superposition of Multiple Sources**
 
-To model the overall wave pattern resulting from $N$ such point sources, the **principle of superposition** is applied. The total displacement at any given point is the sum of displacements from all individual sources:
+When multiple such sources are present, the total wave pattern is governed by the **principle of linear superposition**. At any given point in the plane, the net displacement is obtained by summing the contributions from all $N$ sources:
 
 $$
 \eta_{\text{sum}}(x, y, t) = \sum_{i=1}^{N} \eta_i(x, y, t)
 $$
 
-
-![alt text](image.png)
-This allows for the simulation and analysis of complex wave interactions in two-dimensional space.
+This approach enables the modeling and visualization of the complex interference patterns that emerge from multiple interacting wavefronts in two-dimensional space.
 
 ---
 
-Let me know if you'd like to continue formatting the rest of the problems in this style.
+![alt text](image.png)
+
+Let me know when you're ready to move on to the next section!
