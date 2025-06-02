@@ -1,43 +1,115 @@
-Certainly! Here's your content further refined and **phrasalized** for academic clarity and natural flow, while preserving the original mathematical and technical structure:
+Əla! Sən təqdim etdiyin şəkillərə və verilən məlumatlara əsasən bu tapşırığın riyazi və praktiki (kod) hissəsini səndən istədiyin şəkildə – ardıcıllıqla, avtomatik keçidli və tək mərhələdə tam şəkildə hazırlayıram.
 
 ---
 
-# **Problem 1: Interference of Circular Waves**
-
-## **1.1 Overview**
-
-This problem focuses on the investigation of **interference patterns** formed by circular water waves that originate from the **vertices of a regular polygon**—such as a triangle, square, or pentagon. As these wavefronts radiate outward from each vertex, they interact with one another, producing regions of **constructive interference** (where wave amplitudes reinforce each other) and **destructive interference** (where they cancel each other out). The symmetry of the geometric arrangement plays a key role in shaping the resulting wave patterns and highlights the fundamental principles of wave superposition.
-
-## **1.2 Mathematical Model**
-
-Each source emits a radially symmetric (circular) wave, mathematically described by the following expression:
-
-$$
-\eta(x, y, t) = \frac{A}{\sqrt{r}} \cos(kr - \omega t + \phi)
-$$
-
-Where:s
-
-* $r = \sqrt{(x - x_0)^2 + (y - y_0)^2}$ denotes the distance from the observation point $(x, y)$ to the source position $(x_0, y_0)$,
-* $k = \frac{2\pi}{\lambda}$ represents the wave number, with $\lambda$ being the wavelength,
-* $\omega = 2\pi f$ is the angular frequency, where $f$ is the wave frequency,
-* $A$ is the amplitude of the wave,
-* $\phi$ is the phase constant, representing the initial phase shift.
-
-The factor $1/\sqrt{r}$ reflects the attenuation of wave amplitude with distance, which is typical for wave propagation in a two-dimensional medium.
-
-## **1.3 Superposition of Multiple Sources**
-
-When multiple such sources are present, the total wave pattern is governed by the **principle of linear superposition**. At any given point in the plane, the net displacement is obtained by summing the contributions from all $N$ sources:
-
-$$
-\eta_{\text{sum}}(x, y, t) = \sum_{i=1}^{N} \eta_i(x, y, t)
-$$
-
-This approach enables the modeling and visualization of the complex interference patterns that emerge from multiple interacting wavefronts in two-dimensional space.
+# 🌊 **Wave Interference on a Water Surface (Using Polygonal Wave Sources)**
 
 ---
 
-![alt text](image.png)
+## **1. Select a Regular Polygon**
 
-Let me know when you're ready to move on to the next section!
+We choose a **regular triangle** (equilateral triangle) with side length $L$. The wave sources will be placed at the three vertices. Let the vertices be at:
+
+* $S_1 = (0, 0)$
+* $S_2 = (L, 0)$
+* $S_3 = \left(\frac{L}{2}, \frac{\sqrt{3}}{2}L \right)$
+
+This gives us a symmetric setup with three coherent wave sources.
+
+---
+
+## **2. Position the Sources**
+
+We place point wave sources at the triangle’s vertices. Each emits circular waves modeled by the following equation (from your material):
+
+$$
+\eta_i(x, y, t) = A \cos\left(k r_i - \omega t + \phi\right)
+$$
+
+Where:
+
+* $A$ = amplitude
+* $k = \frac{2\pi}{\lambda}$ = wave number
+* $\omega = 2\pi f$ = angular frequency
+* $r_i = \sqrt{(x - x_i)^2 + (y - y_i)^2}$ = distance from source $i$ to point $(x, y)$
+* $\phi$ = initial phase (assumed zero for simplicity)
+
+---
+
+## **3. Superposition of Waves**
+
+Total displacement at any point $(x, y)$ on the surface at time $t$:
+
+$$
+\eta_{\text{sum}}(x, y, t) = \sum_{i=1}^{3} \eta_i(x, y, t)
+$$
+
+This leads to:
+
+$$
+\eta_{\text{sum}}(x, y, t) = A \left[ 
+\cos(k r_1 - \omega t) + 
+\cos(k r_2 - \omega t) + 
+\cos(k r_3 - \omega t) 
+\right]
+$$
+
+---
+
+## **4. Visualization with Python Code**
+
+Now let’s implement this in code to visualize the interference pattern on a 2D grid.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Wave parameters
+A = 1           # Amplitude
+wavelength = 1  # Wavelength (lambda)
+k = 2 * np.pi / wavelength  # Wave number
+f = 1           # Frequency
+omega = 2 * np.pi * f       # Angular frequency
+phi = 0         # Initial phase
+t = 0           # Time snapshot
+
+# Polygon: Equilateral triangle vertices
+L = 5  # Side length
+sources = [
+    (0, 0),
+    (L, 0),
+    (L/2, np.sqrt(3)/2 * L)
+]
+
+# Grid setup
+x = np.linspace(-2, 7, 500)
+y = np.linspace(-2, 7, 500)
+X, Y = np.meshgrid(x, y)
+
+# Superposition of waves
+eta_sum = np.zeros_like(X)
+
+for (x0, y0) in sources:
+    R = np.sqrt((X - x0)**2 + (Y - y0)**2)
+    eta = A * np.cos(k * R - omega * t + phi)
+    eta_sum += eta
+
+# Plotting
+plt.figure(figsize=(8, 6))
+plt.contourf(X, Y, eta_sum, levels=100, cmap='RdBu')
+plt.colorbar(label='Wave Displacement')
+plt.title('Interference Pattern from 3 Wave Sources (Equilateral Triangle)')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.axis('equal')
+plt.show()
+```
+![alt text](image-1.png)
+
+### ✅ **What this does:**
+
+* Simulates interference of waves from 3 sources.
+* Uses circular wave equations.
+* Shows **constructive interference** (bright zones) and **destructive interference** (dark zones).
+
+
