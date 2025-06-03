@@ -1,133 +1,129 @@
-Here’s a **clean, simplified, and fully English version** of the material you provided on **Gravitational Motion and Trajectories**, ideal for a project, study guide, or explanation:
+## 🌍 GRAVITY – PROBLEM 3
+
+## TRAJECTORIES OF A FREELY RELEASED PAYLOAD NEAR EARTH
 
 ---
 
-## 🌍 Problem 3 — Gravitational Motion and Space Trajectories
-
-### 3.1 Newton’s Law of Gravitation
-
-The gravitational force acting between Earth and a payload (e.g., a spacecraft or satellite) is:
-
-$$
-F = \frac{GMm}{r^2}
-$$
-
-* **$G$** – Gravitational constant: $6.67430 \times 10^{-11} \ \mathrm{m^3 \cdot kg^{-1} \cdot s^{-2}}$
-* **$M$** – Mass of Earth: $5.972 \times 10^{24} \ \mathrm{kg}$
-* **$m$** – Mass of the object/payload
-* **$r$** – Distance from the center of the Earth
+### ✅ 1. ANALYZE THE POSSIBLE TRAJECTORIES (E.G., PARABOLIC, HYPERBOLIC, ELLIPTICAL) OF A PAYLOAD RELEASED NEAR EARTH
 
 ---
 
-### 3.1.1 Conservation of Mechanical Energy
+### 📐 Theory:
 
-The total mechanical energy $E$ (kinetic + potential) of a payload in motion is:
+Based on **total specific mechanical energy (E)**:
 
 $$
-E = \frac{1}{2}mv^2 - \frac{GMm}{r}
+E = \frac{v^2}{2} - \frac{GM}{r}
 $$
 
-* $v$: Speed of the object
-* $r$: Distance from Earth’s center
+* If $E < 0$: **Elliptical orbit**
+* If $E = 0$: **Parabolic trajectory** (escape threshold)
+* If $E > 0$: **Hyperbolic trajectory** (escape achieved)
+
+These orbits arise depending on the **payload’s velocity** at release.
 
 ---
 
-### 🚀 Trajectory Types Based on Energy
-
-#### 1. **Parabolic Trajectory** – Escape velocity
-
-* Total Energy $E = 0$
-* Condition:
-
-  $$
-  \frac{1}{2}mv^2 = \frac{GMm}{r}
-  $$
-* Follows a parabolic path; just escapes Earth’s gravity.
-
-#### 2. **Elliptical Orbit**
-
-* Total Energy $E < 0$
-* Equation:
-
-  $$
-  E = -\frac{GMm}{2a}
-  $$
-* $a$: Semi-major axis of the elliptical orbit
-
-#### 3. **Hyperbolic Trajectory**
-
-* Total Energy $E > 0$
-* Object escapes Earth’s gravity at high speed.
+### ✅ 2. PERFORM A NUMERICAL ANALYSIS TO COMPUTE THE PATH OF THE PAYLOAD BASED ON GIVEN INITIAL CONDITIONS (POSITION, VELOCITY, AND ALTITUDE)
 
 ---
 
-### 3.1.2 Mathematical Model (Force and Acceleration)
+### 💻 Python Code – Trajectory Simulation:
 
-Using **Newton’s Second Law** and **Universal Gravitation**:
+```python
+import numpy as np
+import matplotlib.pyplot as plt
 
-$$
-\vec{a} = -\frac{GM}{r^3} \vec{r}
-$$
+# Constants
+G = 6.67430e-11
+M = 5.972e24
+R_earth = 6.371e6
 
-Where:
+def simulate_trajectory(v0, angle_deg, h0=300e3, dt=1, steps=10000):
+    r0 = R_earth + h0
+    angle = np.radians(angle_deg)
+    pos = np.array([r0, 0])
+    vel = np.array([0, v0])
+    theta = angle
+    vel = v0 * np.array([np.cos(theta), np.sin(theta)])
 
-* $\vec{a}$: Acceleration vector
-* $\vec{r}$: Position vector
-* $r = \sqrt{x^2 + y^2}$
+    positions = [pos.copy()]
+    
+    for _ in range(steps):
+        r = np.linalg.norm(pos)
+        acc = -G * M * pos / r**3
+        vel += acc * dt
+        pos += vel * dt
+        if np.linalg.norm(pos) < R_earth:
+            break  # hit Earth
+        positions.append(pos.copy())
 
-This is a **central force problem**, often solved using numerical methods like Euler or Runge-Kutta.
+    return np.array(positions)
 
----
+# Simulate 3 cases
+trajectories = [
+    simulate_trajectory(7500, 45),
+    simulate_trajectory(11000, 45),
+    simulate_trajectory(11200, 45)
+]
 
-### 3.1.3 🚀 Real-World Trajectories
+colors = ['blue', 'green', 'red']
+labels = ['Elliptical (~7500 m/s)', 'Parabolic (~11000 m/s)', 'Hyperbolic (>11200 m/s)']
 
-| Trajectory Type         | Required Speed (from LEO) | Real-World Example                        |
-| ----------------------- | ------------------------- | ----------------------------------------- |
-| **Suborbital**          | < 7.8 km/s                | Blue Origin space tourism                 |
-| **Orbital (Circular)**  | ≈ 7.8 km/s                | Satellites, ISS                           |
-| **Elliptical Orbit**    | 7.8 – 11.2 km/s           | Geostationary satellites, transfer orbits |
-| **Escape (Hyperbolic)** | > 11.2 km/s               | Voyager, Mars rovers                      |
+# Plot
+plt.figure(figsize=(8,8))
+for traj, color, label in zip(trajectories, colors, labels):
+    plt.plot(traj[:,0]/1e6, traj[:,1]/1e6, label=label, color=color)
 
-* **LEO**: Low Earth Orbit
-* **ISS**: International Space Station
+earth = plt.Circle((0, 0), R_earth/1e6, color='gray', label="Earth")
+plt.gca().add_patch(earth)
 
----
-
-### 3.1.4 ✅ Key Equations
-
-#### Newton’s Law of Gravitation (Vector Form):
-
-$$
-\vec{F}_g = -\frac{GMm}{r^2} \hat{r}
-$$
-
-* $\hat{r}$: Unit vector in radial direction
-* Negative sign means the force is attractive (toward Earth)
-
-#### Newton’s Second Law:
-
-$$
-\vec{a} = \frac{\vec{F}}{m} = -\frac{GM}{r^3} \vec{r}
-$$
-
-#### Equations of Motion (2D Form):
-
-$$
-\frac{d^2x}{dt^2} = -\frac{GMx}{(x^2 + y^2)^{3/2}}, \quad \frac{d^2y}{dt^2} = -\frac{GMy}{(x^2 + y^2)^{3/2}}
-$$
-
-These are solved using numerical methods (e.g., Euler integration) in Python simulations.
-
----
-
-### 📈 Visualization:
-
-Numerical simulations can visualize trajectories like:
-
-* Arcs (suborbital)
-* Circles and ellipses (orbital)
-* Hyperbolas (escape)
+plt.xlabel("x (Mm)")
+plt.ylabel("y (Mm)")
+plt.title("Payload Trajectories Near Earth")
+plt.axis("equal")
+plt.legend()
+plt.grid(True)
+plt.show()
+```
 
 ---
 
-Would you like this formatted into a **PDF** or **PowerPoint presentation**?
+### ✅ 3. DISCUSS HOW THESE TRAJECTORIES RELATE TO ORBITAL INSERTION, REENTRY, OR ESCAPE SCENARIOS
+
+---
+
+### 🚀 Discussion:
+
+* **Elliptical** → Payload stays bound; may enter stable orbit (useful for satellites).
+* **Parabolic** → Perfect escape with minimal energy (theoretical threshold).
+* **Hyperbolic** → Payload escapes Earth’s gravity; used in **interplanetary missions**.
+* If velocity too low → it **falls back (reentry)**.
+
+Applications:
+
+* Launching satellites (LEO/GEO)
+* Reentry capsules
+* Moon/Mars missions (escape)
+* Debris management
+
+---
+
+### ✅ 4. DEVELOP A COMPUTATIONAL TOOL TO SIMULATE AND VISUALIZE THE MOTION OF THE PAYLOAD UNDER EARTH'S GRAVITY, ACCOUNTING FOR INITIAL VELOCITIES AND DIRECTIONS
+
+---
+
+Already done above with `simulate_trajectory()` — customizable tool:
+
+* Adjust initial velocity
+* Change release angle
+* Simulate multiple bodies
+* Visualize path under gravity
+
+You can expand it to:
+
+* Include air resistance
+* Model gravity assists
+* Add real-world orbital parameters
+
+---
