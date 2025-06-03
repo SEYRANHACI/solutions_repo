@@ -32,9 +32,7 @@ $$
 \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2}
 $$
 
-**Pseudocode:**
-
-```text
+**Pseudocode:** ```text
 For each node:
     If degree == 2 and only resistors:
         Combine as series
