@@ -162,7 +162,7 @@ plt.title("Simulated Verification of Kepler’s 3rd Law")
 plt.grid(True)
 plt.show()
 ```
-
+![alt text](image-11.png)
 ---
 
 . Əla! Aşağıda tam olaraq əvvəlki strukturda — əvvəl **riyazi izah**, sonra **Python kodu**, və hər bir hissənin başlığı **verilən kimi BÖYÜK HƏRFLƏRLƏ** yazılmış şəkildə təqdim olunur. Qısa və aydın saxlanılıb, qrafiklər və nümunələrlə dəstəklənib.
