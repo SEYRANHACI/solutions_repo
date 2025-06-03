@@ -86,7 +86,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 ```
-
+![alt text](image-13.png)
 ---
 
 ### ✅ 3. DISCUSS HOW THESE TRAJECTORIES RELATE TO ORBITAL INSERTION, REENTRY, OR ESCAPE SCENARIOS
