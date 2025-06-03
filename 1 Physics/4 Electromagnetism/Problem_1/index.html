@@ -72,25 +72,35 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#1-exploration-of-applications">✅ 1. Exploration of Applications</a>
+<li class="toctree-l3"><a class="reference internal" href="#1-exploration-of-applications">✅ 1. EXPLORATION OF APPLICATIONS</a>
 <ul>
-<li class="toctree-l4"><a class="reference internal" href="#mathematical-basis">🔸 Mathematical Basis:</a>
+<li class="toctree-l4"><a class="reference internal" href="#mathematical-basis">🔸 Mathematical Basis</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#real-world-applications">🔸 Real-World Applications:</a>
+<li class="toctree-l4"><a class="reference internal" href="#real-world-applications">🔸 Real-World Applications</a>
 </li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#2-simulated-particle-motion">✅ 2. Simulated Particle Motion</a>
+<li class="toctree-l3"><a class="reference internal" href="#2-simulated-particle-motion">✅ 2. SIMULATED PARTICLE MOTION</a>
 <ul>
-<li class="toctree-l4"><a class="reference internal" href="#mathematical-model">🔸 Mathematical Model:</a>
+<li class="toctree-l4"><a class="reference internal" href="#model">🔸 Model</a>
 </li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#3-parameter-exploration">✅ 3. Parameter Exploration</a>
+<li class="toctree-l3"><a class="reference internal" href="#3-parameter-exploration">✅ 3. PARAMETER EXPLORATION</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#key-quantities">🔸 Key Quantities</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#4-visualization">✅ 4. Visualization</a>
+<li class="toctree-l4"><a class="reference internal" href="#effect-of-parameter-changes">🔸 Effect of Parameter Changes</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#python-simulation-code-tasks-24">✅ 💻 Python Simulation Code (Tasks 2–4)</a>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-visualization">✅ 4. VISUALIZATION</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#python-simulation-code-tasks-24">✅ 💻 PYTHON SIMULATION CODE (TASKS 2–4)</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#parameter-test-cases">✅ PARAMETER TEST CASES</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#conclusion">✅ CONCLUSION</a>
 </li>
 </ul>
 </li>
@@ -148,23 +158,29 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<p>Great! Here's your complete solution, <em>with the headings updated</em> to match the four sections from your image:</p>
+<p>Əla iş! Sənin paylaşdığın sənəd məzmun olaraq çox yaxşıdır, sadəcə <strong>GitHub və Visual Studio Code</strong> kimi platformalarda daha yaxşı görünməsi üçün formatı bir az optimallaşdırmaq lazımdır.</p>
+<p>Aşağıda sənə oxunaqlılığı artırılmış və <strong>Markdown sintaksisinə uyğunlaşdırılmış</strong> versiyasını təqdim edirəm — bu versiya GitHub, Jupyter Notebook və VS Code-da daha gözəl görünəcək:</p>
 <hr/>
-<h1 id="complete-solution-lorentz-force-simulation-and-applications">🌟 <em>Complete Solution: Lorentz Force Simulation and Applications</em></h1>
+<h1 id="complete-solution-lorentz-force-simulation-and-applications">🌟 <strong>Complete Solution: Lorentz Force Simulation and Applications</strong></h1>
 <hr/>
-<h2 id="1-exploration-of-applications">✅ <em>1. Exploration of Applications</em></h2>
-<h3 id="mathematical-basis">🔸 Mathematical Basis:</h3>
-<p>The Lorentz force governs the motion of a charged particle in electromagnetic fields:</p>
+<h2 id="1-exploration-of-applications">✅ 1. EXPLORATION OF APPLICATIONS</h2>
+<h3 id="mathematical-basis">🔸 <strong>Mathematical Basis</strong></h3>
+<p>The Lorentz force determines the motion of a charged particle in electromagnetic fields:</p>
 <div class="arithmatex">\[
 \vec{F} = q(\vec{E} + \vec{v} \times \vec{B})
 \]</div>
-<p>Using Newton’s second law:</p>
+<p>From Newton’s second law:</p>
 <div class="arithmatex">\[
 m \frac{d\vec{v}}{dt} = q(\vec{E} + \vec{v} \times \vec{B})
 \]</div>
-<p>This leads to circular, helical, or drift motion based on the field and velocity configuration.</p>
+<p>This leads to:</p>
+<ul>
+<li>Circular motion</li>
+<li>Helical motion</li>
+<li>Drift motion (depending on field &amp; velocity)</li>
+</ul>
 <hr/>
-<h3 id="real-world-applications">🔸 Real-World Applications:</h3>
+<h3 id="real-world-applications">🔸 <strong>Real-World Applications</strong></h3>
 <table>
 <thead>
 <tr>
@@ -174,170 +190,208 @@ m \frac{d\vec{v}}{dt} = q(\vec{E} + \vec{v} \times \vec{B})
 </thead>
 <tbody>
 <tr>
-<td><em>Cyclotron</em></td>
-<td>Circular acceleration of charged particles in $\vec{B}$ field</td>
+<td><strong>Cyclotron</strong></td>
+<td>Circular acceleration of charged particles using magnetic fields</td>
 </tr>
 <tr>
-<td><em>Mass Spectrometer</em></td>
-<td>Deflection reveals mass-to-charge ratio</td>
+<td><strong>Mass Spectrometer</strong></td>
+<td>Particle deflection reveals mass-to-charge ratio</td>
 </tr>
 <tr>
-<td><em>Plasma Confinement</em></td>
-<td>Magnetic fields trap charged particles in devices like Tokamaks</td>
+<td><strong>Plasma Confinement</strong></td>
+<td>Magnetic fields trap particles (e.g., in Tokamaks)</td>
 </tr>
 <tr>
-<td><em>Space Physics</em></td>
-<td>Earth's magnetic field deflects solar wind, cosmic rays</td>
+<td><strong>Space Physics</strong></td>
+<td>Deflects solar wind and cosmic rays near planetary magnetic fields</td>
 </tr>
 </tbody>
 </table>
 <hr/>
-<h2 id="2-simulated-particle-motion">✅ <em>2. Simulated Particle Motion</em></h2>
-<h3 id="mathematical-model">🔸 Mathematical Model:</h3>
-<p>Assume a uniform magnetic field and zero electric field:</p>
-<div class="arithmatex">\[
-\vec{E} = 0, \quad \vec{F} = q (\vec{v} \times \vec{B})
-\]</div>
-<p>This results in:</p>
+<h2 id="2-simulated-particle-motion">✅ 2. SIMULATED PARTICLE MOTION</h2>
+<h3 id="model">🔸 <strong>Model</strong></h3>
+<p>Assume:</p>
 <ul>
-<li><em>Circular motion</em> if $\vec{v} \perp \vec{B}$</li>
-<li><em>Helical motion</em> if $\vec{v}$ has a component along $\vec{B}$</li>
+<li>Uniform magnetic field: <span class="arithmatex">\(\vec{B}\)</span></li>
+<li>No electric field: <span class="arithmatex">\(\vec{E} = 0\)</span></li>
+</ul>
+<p>Then:</p>
+<ul>
+<li>If <span class="arithmatex">\(\vec{v} \perp \vec{B}\)</span>: Circular motion</li>
+<li>If <span class="arithmatex">\(\vec{v} \parallel \vec{B}\)</span>: Linear motion</li>
+<li>If mixed: Helical motion</li>
 </ul>
 <hr/>
-<h2 id="3-parameter-exploration">✅ <em>3. Parameter Exploration</em></h2>
-<p>We vary the following parameters to observe their effects:</p>
+<h2 id="3-parameter-exploration">✅ 3. PARAMETER EXPLORATION</h2>
+<h3 id="key-quantities">🔸 <strong>Key Quantities</strong></h3>
 <ul>
-<li>Electric and Magnetic Fields: $\vec{E}$, $\vec{B}$</li>
-<li>Charge and Mass: $q$, $m$</li>
-<li>Initial Velocity: $\vec{v}_0$</li>
-</ul>
-<p>Useful formula:</p>
-<ul>
-<li><em>Larmor radius</em>:</li>
+<li><strong>Larmor radius</strong>:</li>
 </ul>
 <p>$$
   r_L = \frac{m v_\perp}{|q| B}
   $$</p>
 <ul>
-<li><em>Drift velocity</em> in crossed fields:</li>
+<li><strong>Drift velocity</strong> in crossed fields:</li>
 </ul>
 <p>$$
   \vec{v}_{\text{drift}} = \frac{\vec{E} \times \vec{B}}{B^2}
   $$</p>
+<h3 id="effect-of-parameter-changes">🔸 <strong>Effect of Parameter Changes</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Higher velocity</td>
+<td>Larger radius</td>
+</tr>
+<tr>
+<td>Heavier particle</td>
+<td>Slower rotation</td>
+</tr>
+<tr>
+<td>Negative charge</td>
+<td>Opposite trajectory direction</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\vec{E} \neq 0\)</span></td>
+<td>Adds drift to helical trajectory</td>
+</tr>
+</tbody>
+</table>
 <hr/>
-<h2 id="4-visualization">✅ <em>4. Visualization</em></h2>
-<p>The simulation generates:</p>
+<h2 id="4-visualization">✅ 4. VISUALIZATION</h2>
+<p>Python simulation plots:</p>
 <ul>
-<li><em>2D trajectory plots</em> (e.g., x–y spiral paths)</li>
-<li><em>3D visualizations</em> of particle motion</li>
-<li><em>Insights into drift, Larmor radius, and motion behavior</em></li>
+<li>2D spiral in the x–y plane</li>
+<li>3D helix in x–y–z space</li>
+<li>Changes based on initial velocity and field values</li>
 </ul>
 <hr/>
-<h2 id="python-simulation-code-tasks-24">✅ <em>💻 Python Simulation Code (Tasks 2–4)</em></h2>
-<p>python
-import numpy as np
+<h2 id="python-simulation-code-tasks-24">✅ 💻 PYTHON SIMULATION CODE (TASKS 2–4)</h2>
+<pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D</p>
-<h1 id="-parameters-">--- Parameters ---</h1>
-<p>q = 1.0                          # Charge (C)
-m = 1.0                          # Mass (kg)</p>
-<h1 id="fields">Fields</h1>
-<p>E = np.array([1.0, 0.0, 0.0])    # Electric field (V/m)
-B = np.array([0.0, 0.0, 1.0])    # Magnetic field (T)</p>
-<h1 id="initial-conditions">Initial conditions</h1>
-<p>r0 = np.array([0.0, 0.0, 0.0])   # Position
-v0 = np.array([1.0, 1.0, 1.0])   # Velocity</p>
-<p>T = 20.0     # Total time (s)
-dt = 0.01    # Time step
-steps = int(T / dt)</p>
-<h1 id="arrays">Arrays</h1>
-<p>r = np.zeros((steps, 3))
+from mpl_toolkits.mplot3d import Axes3D
+
+# --- Parameters ---
+q = 1.0                          # Charge (C)
+m = 1.0                          # Mass (kg)
+
+# Fields
+E = np.array([1.0, 0.0, 0.0])    # Electric field (V/m)
+B = np.array([0.0, 0.0, 1.0])    # Magnetic field (T)
+
+# Initial conditions
+r0 = np.array([0.0, 0.0, 0.0])
+v0 = np.array([1.0, 1.0, 1.0])
+
+T = 20.0
+dt = 0.01
+steps = int(T / dt)
+
+# Arrays
+r = np.zeros((steps, 3))
 v = np.zeros((steps, 3))
-t = np.zeros(steps)</p>
-<p>r[0], v[0] = r0, v0</p>
-<p>def acceleration(v):
-    return (q / m) * (E + np.cross(v, B))</p>
-<p>def rk4(r, v, dt):
+t = np.zeros(steps)
+
+r[0], v[0] = r0, v0
+
+def acceleration(v):
+    return (q / m) * (E + np.cross(v, B))
+
+def rk4(r, v, dt):
     k1v = acceleration(v)
-    k1r = v</p>
-<pre><code>k2v = acceleration(v + 0.5 * dt * k1v)
-k2r = v + 0.5 * dt * k1v
+    k1r = v
 
-k3v = acceleration(v + 0.5 * dt * k2v)
-k3r = v + 0.5 * dt * k2v
+    k2v = acceleration(v + 0.5 * dt * k1v)
+    k2r = v + 0.5 * dt * k1v
 
-k4v = acceleration(v + dt * k3v)
-k4r = v + dt * k3v
+    k3v = acceleration(v + 0.5 * dt * k2v)
+    k3r = v + 0.5 * dt * k2v
 
-v_new = v + (dt / 6.0) * (k1v + 2*k2v + 2*k3v + k4v)
-r_new = r + (dt / 6.0) * (k1r + 2*k2r + 2*k3r + k4r)
+    k4v = acceleration(v + dt * k3v)
+    k4r = v + dt * k3v
 
-return r_new, v_new
-</code></pre>
-<p>for i in range(1, steps):
+    v_new = v + (dt / 6.0) * (k1v + 2*k2v + 2*k3v + k4v)
+    r_new = r + (dt / 6.0) * (k1r + 2*k2r + 2*k3r + k4r)
+
+    return r_new, v_new
+
+for i in range(1, steps):
     r[i], v[i] = rk4(r[i-1], v[i-1], dt)
-    t[i] = t[i-1] + dt</p>
-<h1 id="-visualization-">--- Visualization ---</h1>
-<p>fig = plt.figure(figsize=(12, 5))</p>
-<h1 id="2d-trajectory">2D Trajectory</h1>
-<p>plt.subplot(1, 2, 1)
+    t[i] = t[i-1] + dt
+
+# --- Visualization ---
+fig = plt.figure(figsize=(12, 5))
+
+# 2D Trajectory
+plt.subplot(1, 2, 1)
 plt.plot(r[:,0], r[:,1])
 plt.title("2D Trajectory (x-y)")
 plt.xlabel("x [m]")
 plt.ylabel("y [m]")
 plt.axis('equal')
-plt.grid(True)</p>
-<h1 id="3d-trajectory">3D Trajectory</h1>
-<p>ax = fig.add_subplot(1, 2, 2, projection='3d')
+plt.grid(True)
+
+# 3D Trajectory
+ax = fig.add_subplot(1, 2, 2, projection='3d')
 ax.plot3D(r[:,0], r[:,1], r[:,2])
 ax.set_title("3D Trajectory")
 ax.set_xlabel("x [m]")
 ax.set_ylabel("y [m]")
-ax.set_zlabel("z [m]")</p>
-<p>plt.tight_layout()
-plt.show()</p>
+ax.set_zlabel("z [m]")
+
+plt.tight_layout()
+plt.show()
+</code></pre>
 <hr/>
-<h2 id="try-these-parameter-variations">✅ <em>Try These Parameter Variations</em></h2>
+<h2 id="parameter-test-cases">✅ PARAMETER TEST CASES</h2>
 <table>
 <thead>
 <tr>
-<th>Case</th>
+<th>Scenario</th>
 <th>Settings</th>
-<th>Expected Behavior</th>
+<th>Behavior</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Pure Magnetic Field</td>
-<td>E = [0, 0, 0]</td>
+<td><code>E = [0, 0, 0]</code></td>
 <td>Circular/spiral motion</td>
 </tr>
 <tr>
-<td>Crossed Fields (E × B Drift)</td>
-<td>E = [1, 0, 0], B = [0, 0, 1]</td>
+<td>Crossed Fields (E × B)</td>
+<td><code>E = [1, 0, 0], B = [0, 0, 1]</code></td>
 <td>Drift + spiral motion</td>
 </tr>
 <tr>
 <td>Opposite Charge</td>
-<td>q = -1.0</td>
-<td>Opposite trajectory</td>
+<td><code>q = -1.0</code></td>
+<td>Opposite rotation</td>
 </tr>
 <tr>
 <td>Heavier Particle</td>
-<td>m = 2.0</td>
-<td>Slower, larger radius</td>
+<td><code>m = 2.0</code></td>
+<td>Slower motion, larger r</td>
 </tr>
 </tbody>
 </table>
 <hr/>
-<h2 id="conclusion">✅ <em>Conclusion</em></h2>
-<p>This project covered all four key tasks:</p>
+<h2 id="conclusion">✅ CONCLUSION</h2>
+<p>This project covered all four tasks:</p>
 <ol>
-<li><em>Identified key applications</em> of the Lorentz force.</li>
-<li><em>Simulated</em> particle motion in electromagnetic fields.</li>
-<li><em>Explored parameter changes</em> and their effect on motion.</li>
-<li><em>Visualized trajectories</em> in both 2D and 3D.</li>
+<li><strong>Exploration of Applications</strong></li>
+<li><strong>Simulated Particle Motion</strong></li>
+<li><strong>Parameter Exploration</strong></li>
+<li><strong>Visualization</strong></li>
 </ol>
+<p>This simulation builds intuition for motion under Lorentz force — crucial in fields like <strong>accelerator physics</strong>, <strong>space research</strong>, and <strong>plasma engineering</strong>.</p>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
