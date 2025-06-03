@@ -1,96 +1,105 @@
-Great! Here's your complete solution, *with the headings updated* to match the four sections from your image:
+Əla iş! Sənin paylaşdığın sənəd məzmun olaraq çox yaxşıdır, sadəcə **GitHub və Visual Studio Code** kimi platformalarda daha yaxşı görünməsi üçün formatı bir az optimallaşdırmaq lazımdır.
+
+Aşağıda sənə oxunaqlılığı artırılmış və **Markdown sintaksisinə uyğunlaşdırılmış** versiyasını təqdim edirəm — bu versiya GitHub, Jupyter Notebook və VS Code-da daha gözəl görünəcək:
 
 ---
 
-# 🌟 *Complete Solution: Lorentz Force Simulation and Applications*
+# 🌟 **Complete Solution: Lorentz Force Simulation and Applications**
 
 ---
 
-## ✅ *1. Exploration of Applications*
+## ✅ 1. EXPLORATION OF APPLICATIONS
 
-### 🔸 Mathematical Basis:
+### 🔸 **Mathematical Basis**
 
-The Lorentz force governs the motion of a charged particle in electromagnetic fields:
+The Lorentz force determines the motion of a charged particle in electromagnetic fields:
 
 $$
 \vec{F} = q(\vec{E} + \vec{v} \times \vec{B})
 $$
 
-Using Newton’s second law:
+From Newton’s second law:
 
 $$
 m \frac{d\vec{v}}{dt} = q(\vec{E} + \vec{v} \times \vec{B})
 $$
 
-This leads to circular, helical, or drift motion based on the field and velocity configuration.
+This leads to:
+
+* Circular motion
+* Helical motion
+* Drift motion (depending on field & velocity)
 
 ---
 
-### 🔸 Real-World Applications:
+### 🔸 **Real-World Applications**
 
-| System                 | Role of Lorentz Force                                           |
-| ---------------------- | --------------------------------------------------------------- |
-| *Cyclotron*          | Circular acceleration of charged particles in \$\vec{B}\$ field |
-| *Mass Spectrometer*  | Deflection reveals mass-to-charge ratio                         |
-| *Plasma Confinement* | Magnetic fields trap charged particles in devices like Tokamaks |
-| *Space Physics*      | Earth's magnetic field deflects solar wind, cosmic rays         |
-
----
-
-## ✅ *2. Simulated Particle Motion*
-
-### 🔸 Mathematical Model:
-
-Assume a uniform magnetic field and zero electric field:
-
-$$
-\vec{E} = 0, \quad \vec{F} = q (\vec{v} \times \vec{B})
-$$
-
-This results in:
-
-* *Circular motion* if \$\vec{v} \perp \vec{B}\$
-* *Helical motion* if \$\vec{v}\$ has a component along \$\vec{B}\$
+| System                 | Role of Lorentz Force                                              |
+| ---------------------- | ------------------------------------------------------------------ |
+| **Cyclotron**          | Circular acceleration of charged particles using magnetic fields   |
+| **Mass Spectrometer**  | Particle deflection reveals mass-to-charge ratio                   |
+| **Plasma Confinement** | Magnetic fields trap particles (e.g., in Tokamaks)                 |
+| **Space Physics**      | Deflects solar wind and cosmic rays near planetary magnetic fields |
 
 ---
 
-## ✅ *3. Parameter Exploration*
+## ✅ 2. SIMULATED PARTICLE MOTION
 
-We vary the following parameters to observe their effects:
+### 🔸 **Model**
 
-* Electric and Magnetic Fields: \$\vec{E}\$, \$\vec{B}\$
-* Charge and Mass: \$q\$, \$m\$
-* Initial Velocity: \$\vec{v}\_0\$
+Assume:
 
-Useful formula:
+* Uniform magnetic field: $\vec{B}$
+* No electric field: $\vec{E} = 0$
 
-* *Larmor radius*:
+Then:
+
+* If $\vec{v} \perp \vec{B}$: Circular motion
+* If $\vec{v} \parallel \vec{B}$: Linear motion
+* If mixed: Helical motion
+
+---
+
+## ✅ 3. PARAMETER EXPLORATION
+
+### 🔸 **Key Quantities**
+
+* **Larmor radius**:
 
   $$
   r_L = \frac{m v_\perp}{|q| B}
   $$
 
-* *Drift velocity* in crossed fields:
+* **Drift velocity** in crossed fields:
 
   $$
   \vec{v}_{\text{drift}} = \frac{\vec{E} \times \vec{B}}{B^2}
   $$
 
+### 🔸 **Effect of Parameter Changes**
+
+| Parameter        | Effect                           |
+| ---------------- | -------------------------------- |
+| Higher velocity  | Larger radius                    |
+| Heavier particle | Slower rotation                  |
+| Negative charge  | Opposite trajectory direction    |
+| $\vec{E} \neq 0$ | Adds drift to helical trajectory |
+
 ---
 
-## ✅ *4. Visualization*
+## ✅ 4. VISUALIZATION
 
-The simulation generates:
+Python simulation plots:
 
-* *2D trajectory plots* (e.g., x–y spiral paths)
-* *3D visualizations* of particle motion
-* *Insights into drift, Larmor radius, and motion behavior*
+* 2D spiral in the x–y plane
+* 3D helix in x–y–z space
+* Changes based on initial velocity and field values
 
 ---
 
-## ✅ *💻 Python Simulation Code (Tasks 2–4)*
+## ✅ 💻 PYTHON SIMULATION CODE (TASKS 2–4)
 
-python
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -104,11 +113,11 @@ E = np.array([1.0, 0.0, 0.0])    # Electric field (V/m)
 B = np.array([0.0, 0.0, 1.0])    # Magnetic field (T)
 
 # Initial conditions
-r0 = np.array([0.0, 0.0, 0.0])   # Position
-v0 = np.array([1.0, 1.0, 1.0])   # Velocity
+r0 = np.array([0.0, 0.0, 0.0])
+v0 = np.array([1.0, 1.0, 1.0])
 
-T = 20.0     # Total time (s)
-dt = 0.01    # Time step
+T = 20.0
+dt = 0.01
 steps = int(T / dt)
 
 # Arrays
@@ -165,27 +174,31 @@ ax.set_zlabel("z [m]")
 
 plt.tight_layout()
 plt.show()
-
-
----
-
-## ✅ *Try These Parameter Variations*
-
-| Case                         | Settings                       | Expected Behavior      |
-| ---------------------------- | ------------------------------ | ---------------------- |
-| Pure Magnetic Field          | E = [0, 0, 0]                | Circular/spiral motion |
-| Crossed Fields (E × B Drift) | E = [1, 0, 0], B = [0, 0, 1] | Drift + spiral motion  |
-| Opposite Charge              | q = -1.0                     | Opposite trajectory    |
-| Heavier Particle             | m = 2.0                      | Slower, larger radius  |
+```
 
 ---
 
-## ✅ *Conclusion*
+## ✅ PARAMETER TEST CASES
 
-This project covered all four key tasks:
+| Scenario               | Settings                       | Behavior                |
+| ---------------------- | ------------------------------ | ----------------------- |
+| Pure Magnetic Field    | `E = [0, 0, 0]`                | Circular/spiral motion  |
+| Crossed Fields (E × B) | `E = [1, 0, 0], B = [0, 0, 1]` | Drift + spiral motion   |
+| Opposite Charge        | `q = -1.0`                     | Opposite rotation       |
+| Heavier Particle       | `m = 2.0`                      | Slower motion, larger r |
 
-1. *Identified key applications* of the Lorentz force.
-2. *Simulated* particle motion in electromagnetic fields.
-3. *Explored parameter changes* and their effect on motion.
-4. *Visualized trajectories* in both 2D and 3D.
+---
+
+## ✅ CONCLUSION
+
+This project covered all four tasks:
+
+1. **Exploration of Applications**
+2. **Simulated Particle Motion**
+3. **Parameter Exploration**
+4. **Visualization**
+
+This simulation builds intuition for motion under Lorentz force — crucial in fields like **accelerator physics**, **space research**, and **plasma engineering**.
+
+---
 
