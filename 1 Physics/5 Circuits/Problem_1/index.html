@@ -77,6 +77,16 @@
 <li class="toctree-l1 current"><a class="reference internal current">5 Circuits</a>
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#option-1-simplified-task-algorithm-description">Option 1: Simplified Task – Algorithm Description</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#1-identifying-series-and-parallel-connections">🔹 1. Identifying Series and Parallel Connections</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-iterative-reduction">🔹 2. Iterative Reduction</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-handling-nested-combinations">🔹 3. Handling Nested Combinations</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -126,7 +136,64 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<p>XXX</p>
+<p>Əla! Sən dediyin kimi, sadəcə <strong>başlığı</strong> dəyişib, <strong>sənin verdiyin formada</strong> yazıram. Qalan hissəni olduğu kimi saxlayıram:</p>
+<hr/>
+<h2 id="task-options"><strong>Task Options:</strong></h2>
+<h3 id="option-1-simplified-task-algorithm-description"><strong>Option 1: Simplified Task – Algorithm Description</strong></h3>
+<p><strong>Describe the algorithm for calculating the equivalent resistance using graph theory.</strong></p>
+<p><strong>Provide the pseudocode that:</strong></p>
+<ul>
+<li>Identifies series and parallel connections.</li>
+<li>Iteratively reduces the graph until a single equivalent resistance is obtained.</li>
+<li>Includes a clear explanation of how the algorithm handles nested combinations.</li>
+</ul>
+<hr/>
+<h3 id="1-identifying-series-and-parallel-connections">🔹 1. Identifying Series and Parallel Connections</h3>
+<p><strong>Series Rule:</strong>
+If a node connects exactly <strong>two resistors</strong> and no other components, they are in <strong>series</strong>.</p>
+<div class="arithmatex">\[
+R_{\text{eq}} = R_1 + R_2
+\]</div>
+<p><strong>Parallel Rule:</strong>
+If two or more resistors connect the <strong>same pair of nodes</strong>, they are in <strong>parallel</strong>.</p>
+<div class="arithmatex">\[
+\frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2}
+\]</div>
+<p><strong>Pseudocode:</strong></p>
+<pre><code class="language-text">For each node:
+    If degree == 2 and only resistors:
+        Combine as series
+
+For each pair of nodes:
+    If multiple resistors:
+        Combine as parallel
+</code></pre>
+<hr/>
+<h3 id="2-iterative-reduction">🔹 2. Iterative Reduction</h3>
+<p>Repeat simplifications until only one equivalent resistor remains between the input and output nodes.</p>
+<p><strong>Pseudocode:</strong></p>
+<pre><code class="language-text">while graph has more than 2 nodes:
+    simplify series
+    simplify parallel
+</code></pre>
+<hr/>
+<h3 id="3-handling-nested-combinations">🔹 3. Handling Nested Combinations</h3>
+<p>Use <strong>recursive reduction</strong> on subgraphs or inner groups.</p>
+<p><strong>Example:</strong>
+If (R1 || R2) is in series with R3:</p>
+<div class="arithmatex">\[
+R_{\text{eq}} = \left(\frac{1}{R_1} + \frac{1}{R_2}\right)^{-1} + R_3
+\]</div>
+<p><strong>Pseudocode:</strong></p>
+<pre><code class="language-text">function reduce(graph):
+    if no nested groups:
+        return equivalent
+    else:
+        simplify inner group
+        replace with one resistor
+        repeat
+</code></pre>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
