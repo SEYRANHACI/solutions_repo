@@ -102,7 +102,7 @@ plt.legend()
 plt.grid(True, linestyle='--', alpha=0.5)
 plt.show()
 ```
-
+![alt text](image-12.png)
 ---
 
 ### ✅ 4. DISCUSS THEIR IMPORTANCE IN SPACE EXPLORATION, INCLUDING LAUNCHING SATELLITES, MISSIONS TO OTHER PLANETS, AND POTENTIAL INTERSTELLAR TRAVEL
