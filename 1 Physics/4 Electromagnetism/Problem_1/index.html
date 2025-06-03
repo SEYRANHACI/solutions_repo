@@ -72,7 +72,25 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#11-electromagnetism-mathematical-formulation">1.1 Electromagnetism – Mathematical Formulation</a>
+<li class="toctree-l3"><a class="reference internal" href="#1-exploration-of-applications">✅ 1. Exploration of Applications</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#mathematical-basis">🔸 Mathematical Basis:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#real-world-applications">🔸 Real-World Applications:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-simulated-particle-motion">✅ 2. Simulated Particle Motion</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#mathematical-model">🔸 Mathematical Model:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-parameter-exploration">✅ 3. Parameter Exploration</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-visualization">✅ 4. Visualization</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#python-simulation-code-tasks-24">✅ 💻 Python Simulation Code (Tasks 2–4)</a>
 </li>
 </ul>
 </li>
@@ -130,36 +148,196 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<p>Certainly! Here's your <strong>phrased and academically styled version</strong> of the electromagnetic problem text, with a clear structure, natural flow, and no change to the technical or mathematical content:</p>
+<p>Great! Here's your complete solution, <em>with the headings updated</em> to match the four sections from your image:</p>
 <hr/>
-<h1 id="problem-1-motion-of-a-charged-particle-in-a-magnetic-field"><strong>Problem 1: Motion of a Charged Particle in a Magnetic Field</strong></h1>
-<h2 id="11-electromagnetism-mathematical-formulation"><strong>1.1 Electromagnetism – Mathematical Formulation</strong></h2>
-<p>The motion of a charged particle in electromagnetic fields is governed by the <strong>Lorentz force</strong> law, which is expressed as:</p>
+<h1 id="complete-solution-lorentz-force-simulation-and-applications">🌟 <em>Complete Solution: Lorentz Force Simulation and Applications</em></h1>
+<hr/>
+<h2 id="1-exploration-of-applications">✅ <em>1. Exploration of Applications</em></h2>
+<h3 id="mathematical-basis">🔸 Mathematical Basis:</h3>
+<p>The Lorentz force governs the motion of a charged particle in electromagnetic fields:</p>
 <div class="arithmatex">\[
-\vec{F} = q (\vec{E} + \vec{v} \times \vec{B})
+\vec{F} = q(\vec{E} + \vec{v} \times \vec{B})
 \]</div>
-<p>Here:</p>
+<p>Using Newton’s second law:</p>
+<div class="arithmatex">\[
+m \frac{d\vec{v}}{dt} = q(\vec{E} + \vec{v} \times \vec{B})
+\]</div>
+<p>This leads to circular, helical, or drift motion based on the field and velocity configuration.</p>
+<hr/>
+<h3 id="real-world-applications">🔸 Real-World Applications:</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Role of Lorentz Force</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Cyclotron</em></td>
+<td>Circular acceleration of charged particles in $\vec{B}$ field</td>
+</tr>
+<tr>
+<td><em>Mass Spectrometer</em></td>
+<td>Deflection reveals mass-to-charge ratio</td>
+</tr>
+<tr>
+<td><em>Plasma Confinement</em></td>
+<td>Magnetic fields trap charged particles in devices like Tokamaks</td>
+</tr>
+<tr>
+<td><em>Space Physics</em></td>
+<td>Earth's magnetic field deflects solar wind, cosmic rays</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="2-simulated-particle-motion">✅ <em>2. Simulated Particle Motion</em></h2>
+<h3 id="mathematical-model">🔸 Mathematical Model:</h3>
+<p>Assume a uniform magnetic field and zero electric field:</p>
+<div class="arithmatex">\[
+\vec{E} = 0, \quad \vec{F} = q (\vec{v} \times \vec{B})
+\]</div>
+<p>This results in:</p>
 <ul>
-<li><span class="arithmatex">\(\vec{F}\)</span> is the total electromagnetic force acting on the particle,</li>
-<li><span class="arithmatex">\(q\)</span> is the electric charge of the particle,</li>
-<li><span class="arithmatex">\(\vec{E}\)</span> is the electric field vector,</li>
-<li><span class="arithmatex">\(\vec{v}\)</span> is the velocity of the particle,</li>
-<li><span class="arithmatex">\(\vec{B}\)</span> is the magnetic field vector,</li>
-<li>and <span class="arithmatex">\(\times\)</span> denotes the vector (cross) product.</li>
+<li><em>Circular motion</em> if $\vec{v} \perp \vec{B}$</li>
+<li><em>Helical motion</em> if $\vec{v}$ has a component along $\vec{B}$</li>
 </ul>
-<p>In the specific scenario where the <strong>electric field is absent</strong> (i.e., <span class="arithmatex">\(\vec{E} = 0\)</span>), the force reduces to:</p>
-<div class="arithmatex">\[
-\vec{F} = q (\vec{v} \times \vec{B})
-\]</div>
-<p>According to <strong>Newton's second law of motion</strong>, this force results in the following differential equation:</p>
-<div class="arithmatex">\[
-m \frac{d\vec{v}}{dt} = q (\vec{v} \times \vec{B})
-\]</div>
-<p>where <span class="arithmatex">\(m\)</span> is the mass of the particle.</p>
-<p>This equation describes <strong>circular motion</strong> when the velocity vector is initially perpendicular to the magnetic field. The magnetic force, acting as a centripetal force, continuously changes the direction of the velocity while maintaining its magnitude, resulting in uniform circular motion.</p>
 <hr/>
-<p><img alt="alt text" src="../image.png"/></p>
-<p>Let me know if you'd like this continued for more sections or if you want this compiled into a formatted document!</p>
+<h2 id="3-parameter-exploration">✅ <em>3. Parameter Exploration</em></h2>
+<p>We vary the following parameters to observe their effects:</p>
+<ul>
+<li>Electric and Magnetic Fields: $\vec{E}$, $\vec{B}$</li>
+<li>Charge and Mass: $q$, $m$</li>
+<li>Initial Velocity: $\vec{v}_0$</li>
+</ul>
+<p>Useful formula:</p>
+<ul>
+<li><em>Larmor radius</em>:</li>
+</ul>
+<p>$$
+  r_L = \frac{m v_\perp}{|q| B}
+  $$</p>
+<ul>
+<li><em>Drift velocity</em> in crossed fields:</li>
+</ul>
+<p>$$
+  \vec{v}_{\text{drift}} = \frac{\vec{E} \times \vec{B}}{B^2}
+  $$</p>
+<hr/>
+<h2 id="4-visualization">✅ <em>4. Visualization</em></h2>
+<p>The simulation generates:</p>
+<ul>
+<li><em>2D trajectory plots</em> (e.g., x–y spiral paths)</li>
+<li><em>3D visualizations</em> of particle motion</li>
+<li><em>Insights into drift, Larmor radius, and motion behavior</em></li>
+</ul>
+<hr/>
+<h2 id="python-simulation-code-tasks-24">✅ <em>💻 Python Simulation Code (Tasks 2–4)</em></h2>
+<p>python
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D</p>
+<h1 id="-parameters-">--- Parameters ---</h1>
+<p>q = 1.0                          # Charge (C)
+m = 1.0                          # Mass (kg)</p>
+<h1 id="fields">Fields</h1>
+<p>E = np.array([1.0, 0.0, 0.0])    # Electric field (V/m)
+B = np.array([0.0, 0.0, 1.0])    # Magnetic field (T)</p>
+<h1 id="initial-conditions">Initial conditions</h1>
+<p>r0 = np.array([0.0, 0.0, 0.0])   # Position
+v0 = np.array([1.0, 1.0, 1.0])   # Velocity</p>
+<p>T = 20.0     # Total time (s)
+dt = 0.01    # Time step
+steps = int(T / dt)</p>
+<h1 id="arrays">Arrays</h1>
+<p>r = np.zeros((steps, 3))
+v = np.zeros((steps, 3))
+t = np.zeros(steps)</p>
+<p>r[0], v[0] = r0, v0</p>
+<p>def acceleration(v):
+    return (q / m) * (E + np.cross(v, B))</p>
+<p>def rk4(r, v, dt):
+    k1v = acceleration(v)
+    k1r = v</p>
+<pre><code>k2v = acceleration(v + 0.5 * dt * k1v)
+k2r = v + 0.5 * dt * k1v
+
+k3v = acceleration(v + 0.5 * dt * k2v)
+k3r = v + 0.5 * dt * k2v
+
+k4v = acceleration(v + dt * k3v)
+k4r = v + dt * k3v
+
+v_new = v + (dt / 6.0) * (k1v + 2*k2v + 2*k3v + k4v)
+r_new = r + (dt / 6.0) * (k1r + 2*k2r + 2*k3r + k4r)
+
+return r_new, v_new
+</code></pre>
+<p>for i in range(1, steps):
+    r[i], v[i] = rk4(r[i-1], v[i-1], dt)
+    t[i] = t[i-1] + dt</p>
+<h1 id="-visualization-">--- Visualization ---</h1>
+<p>fig = plt.figure(figsize=(12, 5))</p>
+<h1 id="2d-trajectory">2D Trajectory</h1>
+<p>plt.subplot(1, 2, 1)
+plt.plot(r[:,0], r[:,1])
+plt.title("2D Trajectory (x-y)")
+plt.xlabel("x [m]")
+plt.ylabel("y [m]")
+plt.axis('equal')
+plt.grid(True)</p>
+<h1 id="3d-trajectory">3D Trajectory</h1>
+<p>ax = fig.add_subplot(1, 2, 2, projection='3d')
+ax.plot3D(r[:,0], r[:,1], r[:,2])
+ax.set_title("3D Trajectory")
+ax.set_xlabel("x [m]")
+ax.set_ylabel("y [m]")
+ax.set_zlabel("z [m]")</p>
+<p>plt.tight_layout()
+plt.show()</p>
+<hr/>
+<h2 id="try-these-parameter-variations">✅ <em>Try These Parameter Variations</em></h2>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Settings</th>
+<th>Expected Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pure Magnetic Field</td>
+<td>E = [0, 0, 0]</td>
+<td>Circular/spiral motion</td>
+</tr>
+<tr>
+<td>Crossed Fields (E × B Drift)</td>
+<td>E = [1, 0, 0], B = [0, 0, 1]</td>
+<td>Drift + spiral motion</td>
+</tr>
+<tr>
+<td>Opposite Charge</td>
+<td>q = -1.0</td>
+<td>Opposite trajectory</td>
+</tr>
+<tr>
+<td>Heavier Particle</td>
+<td>m = 2.0</td>
+<td>Slower, larger radius</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="conclusion">✅ <em>Conclusion</em></h2>
+<p>This project covered all four key tasks:</p>
+<ol>
+<li><em>Identified key applications</em> of the Lorentz force.</li>
+<li><em>Simulated</em> particle motion in electromagnetic fields.</li>
+<li><em>Explored parameter changes</em> and their effect on motion.</li>
+<li><em>Visualized trajectories</em> in both 2D and 3D.</li>
+</ol>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
