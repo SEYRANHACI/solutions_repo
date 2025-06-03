@@ -175,7 +175,8 @@ ax.set_zlabel("z [m]")
 plt.tight_layout()
 plt.show()
 ```
-
+![alt text](image-1.png)
+![alt text](image-2.png)
 ---
 
 ## ✅ PARAMETER TEST CASES
