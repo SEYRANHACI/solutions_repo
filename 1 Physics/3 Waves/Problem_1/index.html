@@ -70,8 +70,6 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#1-identifying-series-and-parallel-connections">🔹 1. Identifying Series and Parallel Connections</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#2-iterative-reduction">🔹 2. Iterative Reduction</a>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="#3-handling-nested-combinations">🔹 3. Handling Nested Combinations</a>
 </li>
 </ul>
@@ -159,20 +157,24 @@ If two or more resistors connect the <strong>same pair of nodes</strong>, they a
 <div class="arithmatex">\[
 \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2}
 \]</div>
-<p><strong>Pseudocode:</strong></p>
-<pre><code class="language-text">For each node:
+<p><strong>Pseudocode:</strong> ```text
+For each node:
     If degree == 2 and only resistors:
-        Combine as series
-
-For each pair of nodes:
+        Combine as series</p>
+<p>For each pair of nodes:
     If multiple resistors:
-        Combine as parallel
-</code></pre>
-<hr/>
-<h3 id="2-iterative-reduction">🔹 2. Iterative Reduction</h3>
-<p>Repeat simplifications until only one equivalent resistor remains between the input and output nodes.</p>
-<p><strong>Pseudocode:</strong></p>
-<pre><code class="language-text">while graph has more than 2 nodes:
+        Combine as parallel</p>
+<pre><code>
+---
+
+### 🔹 2. Iterative Reduction
+
+Repeat simplifications until only one equivalent resistor remains between the input and output nodes.
+
+**Pseudocode:**
+
+```text
+while graph has more than 2 nodes:
     simplify series
     simplify parallel
 </code></pre>
