@@ -130,7 +130,7 @@ plt.axis('equal')
 plt.grid(False)
 plt.show()
 ```
-
+![alt text](image-2.png)
 ---
 
 ## ✅ **Conclusion**
