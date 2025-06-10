@@ -129,6 +129,139 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<hr/>
+<h1 id="complete-solution-estimating-pi-using-monte-carlo-methods">🌟 COMPLETE SOLUTION: ESTIMATING PI USING MONTE CARLO METHODS</h1>
+<hr/>
+<h2 id="part-1-estimating-using-a-circle">✅ PART 1: ESTIMATING π USING A CIRCLE</h2>
+<hr/>
+<h3 id="1-theoretical-foundation">1. THEORETICAL FOUNDATION</h3>
+<ul>
+<li>Consider a unit circle (radius <span class="arithmatex">\(r=1\)</span>) inscribed inside a square with side length 2.</li>
+<li>The area of the circle:</li>
+</ul>
+<p>$$
+  A_{\text{circle}} = \pi r^2 = \pi
+  $$
+* The area of the square:</p>
+<p>$$
+  A_{\text{square}} = (2r)^2 = 4
+  $$
+* Probability <span class="arithmatex">\(P\)</span> that a random point inside the square lies in the circle:</p>
+<p>$$
+  P = \frac{A_{\text{circle}}}{A_{\text{square}}} = \frac{\pi}{4}
+  $$
+* Estimation formula for <span class="arithmatex">\(\pi\)</span>:</p>
+<p>$$
+  \pi \approx 4 \times \frac{N_{\text{inside}}}{N_{\text{total}}}
+  $$</p>
+<hr/>
+<h3 id="2-simulation">2. SIMULATION</h3>
+<ul>
+<li>Generate <span class="arithmatex">\(N\)</span> random points uniformly inside the square <span class="arithmatex">\([-1,1] \times [-1,1]\)</span>.</li>
+<li>Count how many points fall inside the circle.</li>
+<li>Estimate <span class="arithmatex">\(\pi\)</span> using the formula above.</li>
+</ul>
+<pre><code class="language-python">import numpy as np
+
+N = 10000
+points = np.random.uniform(-1, 1, (N, 2))
+distances = np.linalg.norm(points, axis=1)
+inside_circle = distances &lt;= 1
+
+pi_estimate = 4 * np.sum(inside_circle) / N
+print(f"Estimated π: {pi_estimate:.5f}")
+</code></pre>
+<hr/>
+<h3 id="3-visualization">3. VISUALIZATION</h3>
+<ul>
+<li>Plot the points inside and outside the circle with different colors.</li>
+</ul>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+
+plt.figure(figsize=(6,6))
+plt.scatter(points[inside_circle,0], points[inside_circle,1], color='blue', s=1, label='Inside Circle')
+plt.scatter(points[~inside_circle,0], points[~inside_circle,1], color='red', s=1, label='Outside Circle')
+plt.legend()
+plt.title("Monte Carlo Estimation of π Using Circle")
+plt.gca().set_aspect('equal')
+plt.show()
+</code></pre>
+<h2 id="_1"><img alt="alt text" src="../image-9.png"/></h2>
+<h3 id="4-analysis">4. ANALYSIS</h3>
+<ul>
+<li>As <span class="arithmatex">\(N\)</span> increases, the estimate converges to the true value of <span class="arithmatex">\(\pi\)</span>.</li>
+<li>The error decreases roughly at a rate proportional to <span class="arithmatex">\(\frac{1}{\sqrt{N}}\)</span> (statistical convergence).</li>
+<li>Computational time grows linearly with <span class="arithmatex">\(N\)</span>.</li>
+</ul>
+<hr/>
+<h2 id="part-2-estimating-using-buffons-needle">✅ PART 2: ESTIMATING π USING BUFFON’S NEEDLE</h2>
+<hr/>
+<h3 id="1-theoretical-foundation_1">1. THEORETICAL FOUNDATION</h3>
+<ul>
+<li>Needle of length <span class="arithmatex">\(l\)</span> is dropped onto a plane with parallel lines spaced by distance <span class="arithmatex">\(d\)</span>, with <span class="arithmatex">\(l \leq d\)</span>.</li>
+<li>Probability <span class="arithmatex">\(P\)</span> that the needle crosses a line:</li>
+</ul>
+<p>$$
+  P = \frac{2l}{\pi d}
+  $$
+* If needle is dropped <span class="arithmatex">\(N\)</span> times and crosses lines <span class="arithmatex">\(k\)</span> times, estimate <span class="arithmatex">\(\pi\)</span> as:</p>
+<p>$$
+  \pi \approx \frac{2 l N}{d k}
+  $$</p>
+<hr/>
+<h3 id="2-simulation_1">2. SIMULATION</h3>
+<ul>
+<li>Simulate random needle centers (distance to nearest line) and angles.</li>
+<li>Count how many crosses occur.</li>
+<li>Estimate <span class="arithmatex">\(\pi\)</span> using the formula.</li>
+</ul>
+<pre><code class="language-python">import numpy as np
+
+N = 10000
+l = 1.0
+d = 1.0
+
+centers = np.random.uniform(0, d/2, N)
+angles = np.random.uniform(0, np.pi/2, N)
+
+crosses = centers &lt;= (l/2) * np.sin(angles)
+k = np.sum(crosses)
+
+pi_estimate = (2 * l * N) / (d * k)
+print(f"Estimated π (Buffon's Needle): {pi_estimate:.5f}")
+</code></pre>
+<hr/>
+<h3 id="3-visualization_1">3. VISUALIZATION</h3>
+<ul>
+<li>Plot sample needles and parallel lines, color code crossing needles.</li>
+</ul>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+
+plt.figure(figsize=(8,4))
+for i in range(200):
+    c = centers[i]
+    a = angles[i]
+    x1 = c - (l/2)*np.cos(a)
+    x2 = c + (l/2)*np.cos(a)
+    y = i
+    plt.plot([x1, x2], [y, y], 'b-' if crosses[i] else 'r-')
+
+for line_pos in np.arange(0, d/2*201, d/2):
+    plt.axvline(line_pos, color='k', linestyle='--', linewidth=0.5)
+
+plt.title("Buffon's Needle Simulation (Sample)")
+plt.xlabel("Position")
+plt.ylabel("Needle Index")
+plt.show()
+</code></pre>
+<h2 id="_2"><img alt="alt text" src="../image-10.png"/></h2>
+<h3 id="4-analysis_1">4. ANALYSIS</h3>
+<ul>
+<li>Increasing <span class="arithmatex">\(N\)</span> improves accuracy.</li>
+<li>Convergence is similar to circle method but often slower.</li>
+<li>Highlights geometric probability concepts.</li>
+</ul>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
