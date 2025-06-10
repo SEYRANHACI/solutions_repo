@@ -92,10 +92,6 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#hat-olunan-hisslr">✅ Əhatə olunan hissələr:</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#glck-mrhllr-gr-istyirsns">⚠ Gələcək mərhələlər (əgər istəyirsənsə):</a>
-</li>
 </ul>
 </li>
 </ul>
@@ -132,55 +128,87 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
-<p>Mən Problem 1 üçün tam riyazi əsaslandırmanı və Python simulyasiyasını təqdim etdim. Bu kod sənədi artıq yaradılıb və aşağıdakılara cavab verir:</p>
-<h3 id="hat-olunan-hisslr">✅ Əhatə olunan hissələr:</h3>
-<ol>
-<li>
-<p><strong>Riyazi əsaslandırma:</strong></p>
-</li>
-<li>
-<p>Yatay və şaquli hərəkətin tənlikləri</p>
-</li>
-<li>Uçuş müddəti və məsafə üçün çıxarılmış düsturlar</li>
-<li>
-<p>İdeal modelin sərhədləri</p>
-</li>
-<li>
-<p><strong>Python kodu ilə simulyasiya:</strong></p>
-</li>
-<li>
-<p>Atış bucağından asılı olaraq məsafənin qrafiki</p>
-</li>
-<li>
-<p>Müxtəlif başlanğıc sürətləri üçün müqayisəli qrafik</p>
-</li>
-<li>
-<p><strong>Nəticələrin vizualizasiyası:</strong></p>
-</li>
-<li>
-<p>0–90° bucaqları üzrə məsafənin qrafiki</p>
-</li>
-<li>Fərqli v₀ qiymətləri üçün təsir analizi</li>
-</ol>
 <hr/>
-<h3 id="glck-mrhllr-gr-istyirsns">⚠ Gələcək mərhələlər (əgər istəyirsənsə):</h3>
+<h1 id="task"><strong>TASK</strong></h1>
+<p><strong>MEASURE THE ACCELERATION DUE TO GRAVITY USING A PENDULUM AND IN DETAILS ANALYZE THE UNCERTAINTIES IN THE MEASUREMENTS.</strong></p>
+<p>This experiment emphasizes rigorous measurement practices, uncertainty analysis, and their role in experimental physics.</p>
+<hr/>
+<h1 id="procedure"><strong>PROCEDURE</strong></h1>
+<hr/>
+<h2 id="1-materials"><strong>1. MATERIALS</strong></h2>
+<p>Prepare the following materials:</p>
 <ul>
-<li>Hündür başlanğıc nöqtəsi daxil edilsin</li>
-<li>Hava müqaviməti (drag force) modelləşdirilsin</li>
-<li>Reallığa daha yaxın nümunələr simulyasiya olunsun (idman, top atışı, və s.)</li>
+<li>A string (1 or 1.5 meters long)</li>
+<li>A small weight (e.g., bag of coins, sugar packet, or key chain)</li>
+<li>Stopwatch or smartphone timer</li>
+<li>Ruler or measuring tape</li>
 </ul>
-<p>Əgər <strong>Problem 2</strong> də bu mövzunun davamıdırsa və ya başqa bir məsələyə aiddirsə, zəhmət olmasa onu tam şəkildə paylaş — onu da həll edim.</p>
-<p>Riyazi əsaslandırma:</p>
-<p>Yatay və şaquli hərəkətin tənlikləri</p>
-<p>Uçuş müddəti və məsafə üçün çıxarılmış düsturlar</p>
-<p>İdeal modelin sərhədləri</p>
-<p>Python kodu ilə simulyasiya:</p>
-<p>Atış bucağından asılı olaraq məsafənin qrafiki</p>
-<p>Müxtəlif başlanğıc sürətləri üçün müqayisəli qrafik</p>
-<p>Nəticələrin vizualizasiyası:</p>
-<p>0–90° bucaqları üzrə məsafənin qrafiki</p>
-<p>Fərqli v₀ qiymətləri üçün təsir analizi</p>
+<p>No calculation is needed in this step.</p>
+<hr/>
+<h2 id="2-setup"><strong>2. SETUP</strong></h2>
+<p><strong>Step-by-step:</strong></p>
+<ul>
+<li>Attach the weight to the string and fix the other end to a sturdy support.</li>
+<li>Measure the length of the pendulum <span class="arithmatex">\(L\)</span> from the suspension point to the center of the mass.</li>
+<li>Record the resolution <span class="arithmatex">\(r\)</span> of the ruler or tape. Calculate uncertainty in length:</li>
+</ul>
+<div class="arithmatex">\[
+\Delta L = \frac{r}{2}
+\]</div>
+<blockquote>
+<p><strong>Example:</strong> If ruler resolution is 1 mm = 0.001 m:</p>
+</blockquote>
+<div class="arithmatex">\[
+\Delta L = \frac{0.001}{2} = 0.0005 \, \text{m}
+\]</div>
+<p><strong>Python Code:</strong></p>
+<pre><code class="language-python">ruler_resolution = 0.001  # in meters
+Delta_L = ruler_resolution / 2
+</code></pre>
+<hr/>
+<h2 id="3-data-collection"><strong>3. DATA COLLECTION</strong></h2>
+<p><strong>Step-by-step:</strong></p>
+<ol>
+<li>Displace the pendulum slightly (less than 15°) and release it.</li>
+<li>Measure the time for 10 full oscillations <span class="arithmatex">\(T_{10,i}\)</span>.</li>
+<li>Repeat this process 10 times to collect 10 values.</li>
+<li>Calculate the <strong>mean</strong> time for 10 oscillations:</li>
+</ol>
+<div class="arithmatex">\[
+\bar{T}_{10} = \frac{1}{n} \sum_{i=1}^{n} T_{10,i}
+\]</div>
+<ol>
+<li>Compute the <strong>standard deviation</strong> of those 10 times:</li>
+</ol>
+<div class="arithmatex">\[
+\sigma_T = \sqrt{ \frac{1}{n - 1} \sum_{i=1}^{n} \left( T_{10,i} - \bar{T}_{10} \right)^2 }
+\]</div>
+<ol>
+<li>Determine the <strong>uncertainty in mean time</strong>:</li>
+</ol>
+<div class="arithmatex">\[
+\Delta T_{10} = \frac{\sigma_T}{\sqrt{n}}
+\]</div>
+<blockquote>
+<p>Where <span class="arithmatex">\(n = 10\)</span></p>
+</blockquote>
+<p><strong>Python Code:</strong></p>
+<pre><code class="language-python">import numpy as np
+
+# Example data
+T10_measurements = np.array([12.5, 12.4, 12.6, 12.5, 12.7, 12.6, 12.4, 12.5, 12.6, 12.5])
+
+# Mean time for 10 oscillations
+T10_mean = np.mean(T10_measurements)
+
+# Standard deviation
+sigma_T = np.std(T10_measurements, ddof=1)
+
+# Uncertainty in the mean
+n = len(T10_measurements)
+Delta_T10 = sigma_T / np.sqrt(n)
+</code></pre>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
